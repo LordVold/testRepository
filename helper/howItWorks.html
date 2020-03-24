@@ -19,14 +19,105 @@
             <div class="h2-wrapper bg-red">
                 <h2>git</h2>
             </div>
-            <p><b>git config --list</b> - проверить состояние (выход "Q")</p>
+            <p><b>ctrl + `</b> - Вызов</p>
+            <span class="hr-line"></span>
+            <p><b>git config --list</b> - Проверить состояние (выход "Q")</p>
+            <p><b>git help &lt;verb&gt;</b> - Справка</p>
+            <p><b>git add -h</b> - Краткий вывод "help"</p>
+            <p><b>cd C:/Users/user/my_project</b> - Инициализация репозитория в существующем каталоге (--> git init)</p>
+            <p><b>git status</b> - Проверка статуса файлов</p>
+            <p><b>git add . </b> - Отслеживание новых файлов</p>
+            <p><b>git diff</b> - Чтобы увидеть, что изменили, но еще не поставили</p>
+            <p><b>git diff --staged (--cached)</b> - Эта команда сравнивает поэтапные изменения с последним коммитом</p>
+            <p><b>git commit -m '...'</b></p>
+            <p><b>git commit -a -m '...'</b> - -a - позволяя пропустить git add</p>
+            <p><b>git rm &lt;name of file&gt; (remove)</b> - Выполняет этап удаления файла</p>
+            <p><b>git mv file_from file_to</b> - Переименовать файл в Git</p>
+            <p><b>git log</b> - перечисляет коммиты, сделанные в этом хранилище, в обратном хронологическом порядке; то есть самые последние коммиты появляются первыми</p>
+            <p><b>git log -p (-2)</b> - показывает разницу ( вывод патча ), вносимую в каждый коммит (ограничить количество отображаемых записей журнала, -2 - отображения только последние две)</p>
+            <p><b>git log --stat</b> - некоторые сокращенные статистические данные для каждого коммита</p>
+            <p><b>git log --pretty=format</b> - указать свой собственный формат вывода журнала</p>
+            <div class="table-wrapper position-r">
+                <table class="pretty-format position-a">
+                    <caption class="pretty-format__caption p-f__c1 bg-red"><b>--pretty=format:</b></caption>
+                </table>
+                <table class="pretty-format table__full position-a d-none">
+                    <caption class="pretty-format__caption p-f__c2 bg-red"><b>--pretty=format:</b></caption>
+                    <tbody>
+                        <tr>
+                            <th>вариант</th>
+                            <th>Описание вывода</th>
+                        </tr>
+
+                        <tr>
+                            <td class="padding-t">%H</td>
+                            <td class="padding-t">Зафиксируйте хеш</td>
+                        </tr>
+                        <tr>
+                            <td>%h</td>
+                            <td>Сокращенный коммит хеш</td>
+                        </tr>
+                        <tr>
+                            <td>%T</td>
+                            <td>Хэш дерева</td>
+                        </tr>
+                        <tr>
+                            <td>%t</td>
+                            <td>Сокращенное дерево хеш</td>
+                        </tr>
+                        <tr>
+                            <td>%P</td>
+                            <td>Родительские хеши</td>
+                        </tr>
+                        <tr>
+                            <td>%p</td>
+                            <td>Сокращенные родительские хеши</td>
+                        </tr>
+                        <tr>
+                            <td>%an</td>
+                            <td>Имя автора</td>
+                        </tr>
+                        <tr>
+                            <td>%ae</td>
+                            <td>Email автора</td>
+                        </tr>
+                        <tr>
+                            <td>%ad</td>
+                            <td>Дата автора (формат учитывает параметр --date =)</td>
+                        </tr>
+                        <tr>
+                            <td>%ar</td>
+                            <td>Дата автора, относительная</td>
+                        </tr>
+                        <tr>
+                            <td>%cn</td>
+                            <td>Имя коммиттера</td>
+                        </tr>
+                        <tr>
+                            <td>%ce</td>
+                            <td>Электронная почта коммиттера</td>
+                        </tr>
+                        <tr>
+                            <td>%cd</td>
+                            <td>Дата коммиттера</td>
+                        </tr>
+                        <tr>
+                            <td>%cr</td>
+                            <td>Дата коммиттера, относительная</td>
+                        </tr>
+                        <tr>
+                            <td class="padding-b">%s</td>
+                            <td class="padding-b">Предмет</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
             <p><b></b></p>
-            <p><b></b></p>
-            <p><b></b></p>
-            <p><b></b></p>
-            <p><b></b></p>
-            <p><b></b></p>
-            <p><b></b></p>
+            <span class="hr-line span__margin_top"></span>
+            <p><b>-s (--short)</b></p>
+            <p><b>??</b> - Новые файлы, которые не отслеживаются</p>
+            <p><b>A</b> - Новые файлы, которые были добавлены в промежуточную область</p>
+            <p><b>M</b> - Измененные файлы</p>
             <p><b></b></p>
             <p><b></b></p>
         </div>
@@ -131,6 +222,16 @@
             }</pre>
         </div>
     </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $('.pretty-format__caption').click(function () {
+                $('.pretty-format').toggleClass('d-none');
+                $('.table__full').toggleClass('scale_1')
+            });
+        });
+    </script>
 </body>
 
 </html>
