@@ -147,27 +147,16 @@ button {
     position: absolute;
 }
 
+.margin_top70 {
+    margin-top: 70px;
+}
+
+.text-align-l {
+    text-align: left;
+}
 /* ~~~ DEFAULT CLASSES END ~~~ */
 /* ============================================================== */
 /* ~~~ DEFAULT COMPONENT START ~~~ */
-/* ~~~ DEFAULT COMPONENT END ~~~ */
-/* ============================================================== */
-/* ~~~ CASTOM STYLE START ~~~ */
-h2 {
-    margin-bottom: 40px;
-    padding: 15px;
-}
-
-p {
-    margin-bottom: 15px;
-}
-
-.h2-wrapper {
-    margin-left: 30px;
-    width: 60%;
-    border-radius: 6px;
-}
-
 .hr-line {
     content: "";
     display: inline-block;
@@ -180,52 +169,69 @@ p {
     margin-bottom: 15px;
 }
 
-.span__margin_top {
-    margin-top: 55px;
+.hr-line-short {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 200px;
+    max-width: 40%;
+    height: 2px;
+    background: rgb(115, 214, 115);
+    margin-left: 1%;
+    margin-bottom: 10px;
 }
 
 /* table pretty=format start */
-.pretty-format {
-    margin-left: 100px;
-    background-color: red;
+.table-git {
+    margin-left: 25px;
+    background-color: rgb(238, 94, 94);
     top: 0;
     left: 0;
     border-radius: 0 0 7px 7px;
+    width: 900px;
+    max-width: 80%;
+    transform: scaleY(1);
+    transition: all 0.5s ease 0s;
 }
 
-.pretty-format caption {
-    padding: 10px 25px;
+.table-git__full {
+    z-index: 1;
+}
+
+.table-git caption {
+    padding: 13px 35px 15px;
     text-align: right;
     cursor: pointer;
-    width: 700px;
 }
 
-.p-f__c1 {
+.t-g__c1 {
     border-radius: 7px;
 }
 
-.p-f__c2 {
+.t-g__c2 {
     border-radius: 7px 7px 0 0;
 }
 
-.pretty-format th {
+.table-git th {
     padding: 25px 0 15px 10px;
 }
 
-.pretty-format th {
+.table-git th {
     border-bottom: 2px solid rgba(0, 0, 0, 0.3);
 }
 
-.pretty-format td:first-child {
+.table-git td:first-child {
     text-align: center;
     font-weight: bold;
+    width: 20%;
 }
 
-.pretty-format td {
+.table-git td {
     padding: 8px 10px;
+    line-height: 1.6;
 }
 
-.pretty-format td:last-child {
+.table-git td:last-child {
     padding-left: 40px;
 }
 
@@ -238,15 +244,29 @@ td.padding-b {
 }
 
 /* toggle */
-.d-none {
+.table-git.scale {
     transform: scaleY(0);
+    transition: all 0.4s ease 0s;
 }
-
-.scale_1 {
-    transform: scaleY(1);
-    transition: all 1s ease 0s;
-}
-
 /* toggle */
 /* table pretty=format end */
+/* ~~~ DEFAULT COMPONENT END ~~~ */
+/* ============================================================== */
+/* ~~~ CASTOM STYLE START ~~~ */
+h2 {
+    margin-bottom: 40px;
+    padding: 15px;
+}
+
+p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.h2-wrapper {
+    margin-left: 30px;
+    width: 60%;
+    border-radius: 6px;
+}
+
 /* ~~~ CASTOM STYLE END ~~~ */

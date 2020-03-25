@@ -26,23 +26,77 @@
             <p><b>git add -h</b> - Краткий вывод "help"</p>
             <p><b>cd C:/Users/user/my_project</b> - Инициализация репозитория в существующем каталоге (--> git init)</p>
             <p><b>git status</b> - Проверка статуса файлов</p>
-            <p><b>git add . </b> - Отслеживание новых файлов</p>
+            <p><b>-s (--short)</b> - $ git status -s</p>
+            <p><b>??</b> - Новые файлы, которые не отслеживаются</p>
+            <p><b>A</b> - Новые файлы, которые были добавлены в промежуточную область</p>
+            <p><b>M</b> - Измененные файлы</p>
+            <div class="table-wrapper position-r">
+                <table class="table-git position-a">
+                    <caption class="table-git__caption t-g__c1 bg-red"><b>Краткое состояние</b></caption>
+                </table>
+                <table class="table-git table-git__full position-a scale">
+                    <caption class="table-git__caption t-g__c2 bg-red"><b>Краткое состояние</b></caption>
+                    <tbody>
+                        <tr>
+                            <td class="padding-t padding-b">
+                                <pre class="text-align-l"><b>
+  $ git status -s
+   M README
+  MM Rakefile
+  A  lib/git.rb
+  M  lib/simplegit.rb
+  ?? LICENSE.txt</b></pre>
+                            </td>
+                            <td class="padding-t padding-b">Новые файлы, которые не отслеживаются, имеют ??рядом с собой, новые файлы, которые были добавлены в промежуточную область, имеют A,
+                                измененные файлы имеют Mи так далее. Выходные данные состоят из двух столбцов - левый столбец показывает состояние промежуточной области, а правый столбец - состояние
+                                рабочего дерева. Так, например, в этом выводе READMEфайл изменяется в рабочем каталоге, но еще не подготовлен, а lib/simplegit.rbфайл изменяется и подготовлен. Он
+                                Rakefileбыл изменен, подготовлен и затем снова изменен, поэтому в него вносятся изменения, как поэтапные, так и неустановленные.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="margin_top70"><b>git add . </b> - Отслеживание новых файлов</p>
             <p><b>git diff</b> - Чтобы увидеть, что изменили, но еще не поставили</p>
             <p><b>git diff --staged (--cached)</b> - Эта команда сравнивает поэтапные изменения с последним коммитом</p>
+            <span class="hr-line"></span>
             <p><b>git commit -m '...'</b></p>
             <p><b>git commit -a -m '...'</b> - -a - позволяя пропустить git add</p>
+            <p><b>Отмена вещей</b></p>
+            <p><b>--amend</b> - удалит предыдущий комит, вставляя на его место текущий</p>
+            <div class="table-wrapper position-r">
+                <table class="table-git position-a">
+                    <caption class="table-git__caption t-g__c1 bg-red"><b>Замена commit</b></caption>
+                </table>
+                <table class="table-git table-git__full position-a scale">
+                    <caption class="table-git__caption t-g__c2 bg-red"><b>Замена commit</b></caption>
+                    <tbody>
+                        <tr>
+                            <td class="padding-t padding-b">
+                                <pre class="text-align-l"><b>
+  $ git commit -m 'Initial commit'
+  $ git add forgotten_file
+  $ git commit --amend</b></pre>
+                            </td>
+                            <td class="padding-t padding-b">В итоге вы получаете один коммит - второй коммит заменяет результаты первого.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <span class="hr-line margin_top70"></span>
             <p><b>git rm &lt;name of file&gt; (remove)</b> - Выполняет этап удаления файла</p>
             <p><b>git mv file_from file_to</b> - Переименовать файл в Git</p>
+            <span class="hr-line"></span>
+            <p><b>git log . . . :</b></p>
             <p><b>git log</b> - перечисляет коммиты, сделанные в этом хранилище, в обратном хронологическом порядке; то есть самые последние коммиты появляются первыми</p>
             <p><b>git log -p (-2)</b> - показывает разницу ( вывод патча ), вносимую в каждый коммит (ограничить количество отображаемых записей журнала, -2 - отображения только последние две)</p>
             <p><b>git log --stat</b> - некоторые сокращенные статистические данные для каждого коммита</p>
             <p><b>git log --pretty=format</b> - указать свой собственный формат вывода журнала</p>
             <div class="table-wrapper position-r">
-                <table class="pretty-format position-a">
-                    <caption class="pretty-format__caption p-f__c1 bg-red"><b>--pretty=format:</b></caption>
+                <table class="table-git position-a">
+                    <caption class="table-git__caption t-g__c1 bg-red"><b>--pretty=format:</b></caption>
                 </table>
-                <table class="pretty-format table__full position-a d-none">
-                    <caption class="pretty-format__caption p-f__c2 bg-red"><b>--pretty=format:</b></caption>
+                <table class="table-git table-git__full position-a scale">
+                    <caption class="table-git__caption t-g__c2 bg-red"><b>--pretty=format:</b></caption>
                     <tbody>
                         <tr>
                             <th>вариант</th>
@@ -112,14 +166,316 @@
                     </tbody>
                 </table>
             </div>
-            <p><b></b></p>
-            <span class="hr-line span__margin_top"></span>
-            <p><b>-s (--short)</b></p>
-            <p><b>??</b> - Новые файлы, которые не отслеживаются</p>
-            <p><b>A</b> - Новые файлы, которые были добавлены в промежуточную область</p>
-            <p><b>M</b> - Измененные файлы</p>
-            <p><b></b></p>
-            <p><b></b></p>
+            <p class="margin_top70"><b>git log --pretty=format:"%h %s" --graph</b> - добавляет симпатичный маленький график ASCII, показывающий вашу ветку и историю слияний</p>
+            <div class="table-wrapper position-r">
+                <table class="table-git position-a">
+                    <caption class="table-git__caption t-g__c1 bg-red">Общие варианты <b>git log</b></caption>
+                </table>
+                <table class="table-git table-git__full position-a scale">
+                    <caption class="table-git__caption t-g__c2 bg-red">Общие варианты <b>git log</b></caption>
+                    <tbody>
+                        <tr>
+                            <th>вариант</th>
+                            <th>Описание вывода</th>
+                        </tr>
+                        <tr>
+                            <td class="padding-t">-p</td>
+                            <td class="padding-t">Показать патч, представленный с каждым коммитом.</td>
+                        </tr>
+                        <tr>
+                            <td>--stat</td>
+                            <td>Показать статистику для файлов, измененных в каждом коммите.</td>
+                        </tr>
+                        <tr>
+                            <td>--shortstat</td>
+                            <td>Отображать только измененную строку / вставки / удаления из команды --stat.</td>
+                        </tr>
+                        <tr>
+                            <td>--name-only</td>
+                            <td>Показать список файлов, измененных после фиксации информации.</td>
+                        </tr>
+                        <tr>
+                            <td>--name-status</td>
+                            <td>Показать список файлов, на которые добавлена ​​/ изменена / удалена информация.</td>
+                        </tr>
+                        <tr>
+                            <td>--abbrev-commit</td>
+                            <td>Показывать только первые несколько символов контрольной суммы SHA-1 вместо всех 40.</td>
+                        </tr>
+                        <tr>
+                            <td>--relative-date</td>
+                            <td>Отображать дату в относительном формате (например, «2 недели назад») вместо использования полного формата даты</td>
+                        </tr>
+                        <tr>
+                            <td>--graph</td>
+                            <td>Отображение графика ASCII ветви и истории слияния рядом с выводом журнала.</td>
+                        </tr>
+                        <tr>
+                            <td>--pretty</td>
+                            <td>Показать коммиты в альтернативном формате. Варианты включают oneline, короткий, полный, полный и формат (где вы указываете свой собственный формат).</td>
+                        </tr>
+                        <tr>
+                            <td class="padding-b">--oneline</td>
+                            <td class="padding-b">Сокращение для --pretty=oneline --abbrev-commitиспользования вместе.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="margin_top70"><b>Ограничение выхода журнала</b></p>
+            <div class="table-wrapper position-r">
+                <table class="table-git position-a">
+                    <caption class="table-git__caption t-g__c1 bg-red">Варианты ограничения выхода <b>git log</b></caption>
+                </table>
+                <table class="table-git table-git__full position-a scale">
+                    <caption class="table-git__caption t-g__c2 bg-red">Варианты ограничения выхода <b>git log</b></caption>
+                    <tbody>
+                        <tr>
+                            <th>вариант</th>
+                            <th>Описание вывода</th>
+                        </tr>
+                        <tr>
+                            <td class="padding-t">-&lt;n&gt;</td>
+                            <td class="padding-t">Показать только последние n коммитов (-2.weeks - две недели)</td>
+                        </tr>
+                        <tr>
+                            <td>--since, --after</td>
+                            <td>Ограничьте коммиты теми, которые сделаны после указанной даты</td>
+                        </tr>
+                        <tr>
+                            <td>--until, --before</td>
+                            <td>Ограничьте коммиты теми, которые были сделаны до указанной даты</td>
+                        </tr>
+                        <tr>
+                            <td>--author</td>
+                            <td>Показывать только те коммиты, в которых запись автора соответствует указанной строке</td>
+                        </tr>
+                        <tr>
+                            <td>--committer</td>
+                            <td>Показывать только те коммиты, в которых запись коммиттера соответствует указанной строке</td>
+                        </tr>
+                        <tr>
+                            <td>--grep</td>
+                            <td>Показывать только коммиты с сообщением коммита, содержащим строку</td>
+                        </tr>
+                        <tr>
+                            <td class="padding-b">-S</td>
+                            <td class="padding-b">Показывать только фиксации добавления или удаления кода, соответствующего строке</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="margin_top70"><b></b></p>
+            <span class="hr-line"></span>
+            <p><b>Tagging</b></p>
+            <p><b> git tag</b> - Список ваших тегов (с необязательным -lили --list)</p>
+            <p><b>Аннотированные метки</b></p>
+            <div class="table-wrapper position-r">
+                <table class="table-git position-a">
+                    <caption class="table-git__caption t-g__c1 bg-red">Аннотированные метки:</caption>
+                </table>
+                <table class="table-git table-git__full position-a scale">
+                    <caption class="table-git__caption t-g__c2 bg-red">Аннотированные метки:</caption>
+                    <tbody>
+                        <tr>
+                            <td class="padding-t padding-b">
+                                <pre class="text-align-l"><b>
+    $ git tag -a v1.4 -m "my version 1.4"
+    $ git tag
+    v0.1
+    v1.3
+    v1.4</b></pre>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="margin_top70"><b>git tag -a</b> - Создать аннотированный тег</p>
+            <p><b>git tag -m</b> - Указывает сообщение</p>
+            <p><b>git show (v1.4)</b> - Указывает сообщение</p>
+            <p><b>Легкие метки</b></p>
+            <p><b>git tag &lt;имя тега&gt;</b> - Создать легкий тег</p>
+            <div class="table-wrapper position-r">
+                <table class="table-git position-a">
+                    <caption class="table-git__caption t-g__c1 bg-red">Легкие метки:</caption>
+                </table>
+                <table class="table-git table-git__full position-a scale">
+                    <caption class="table-git__caption t-g__c2 bg-red">Легкие метки:</caption>
+                    <tbody>
+                        <tr>
+                            <td class="padding-t padding-b">
+                                <pre class="text-align-l"><b>
+    $ git tag v1.4-lw
+    $ git tag
+    v0.1
+    v1.3
+    v1.4
+    v1.4-lw
+    v1.5
+
+    $ git show v1.4-lw
+    commit ca82a6dff817ec66f44342007202690a93763949
+    Author: Scott Chacon &lt;schacon@gee-mail.com&gt;
+    Date:   Mon Mar 17 21:52:11 2008 -0700
+
+        Change version number</b></pre>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <span class="hr-line-short margin_top70"></span>
+            <p><b>Пометка позже</b></p>
+            <p><b>git tag -a v1.2 9fceb02</b> - Чтобы пометить коммит, можно указываете контрольную сумму коммита (или ее часть) в конце команды</p>
+            <div class="table-wrapper position-r">
+                <table class="table-git position-a">
+                    <caption class="table-git__caption t-g__c1 bg-red">Пометка позже</caption>
+                </table>
+                <table class="table-git table-git__full position-a scale">
+                    <caption class="table-git__caption t-g__c2 bg-red">Пометка позже</caption>
+                    <tbody>
+                        <tr>
+                            <td class="padding-t padding-b">
+                                <pre class="text-align-l"><b>
+    $ git tag
+    v0.1
+    v1.2
+    v1.3
+    v1.4
+    v1.4-lw
+    v1.5
+
+    $ git show v1.2
+    tag v1.2
+    Tagger: Scott Chacon &lt;schacon@gee-mail.com&gt;
+    Date:   Mon Feb 9 15:32:16 2009 -0800
+
+    version 1.2
+    commit 9fceb02d0ae598e95dc970b74767f19372d61af8
+    Author: Magnus Chacon &lt;mchacon@gee-mail.com&gt;
+    Date:   Sun Apr 27 20:43:35 2008 -0700
+
+        Update rakefile
+    ...</b></pre>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <span class="hr-line-short margin_top70"></span>
+            <p><b>Обмен тегами</b></p>
+            <p><b>git push origin &lt;tagname&gt;</b> - отправлять теги на общий сервер</p>
+            <div class="table-wrapper position-r">
+                <table class="table-git position-a">
+                    <caption class="table-git__caption t-g__c1 bg-red">Обмен тегами</caption>
+                </table>
+                <table class="table-git table-git__full position-a scale">
+                    <caption class="table-git__caption t-g__c2 bg-red">Обмен тегами</caption>
+                    <tbody>
+                        <tr>
+                            <td class="padding-t padding-b">
+                                <pre class="text-align-l"><b>
+    $ git push origin v1.5
+    Counting objects: 14, done.
+    Delta compression using up to 8 threads.
+    Compressing objects: 100% (12/12), done.
+    Writing objects: 100% (14/14), 2.05 KiB | 0 bytes/s, done.
+    Total 14 (delta 3), reused 0 (delta 0)
+    To git@github.com:schacon/simplegit.git
+     * [new tag]         v1.5 -> v1.5</b></pre>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="margin_top70"><b>--tags</b> - Если есть много тегов</p>
+            <div class="table-wrapper position-r">
+                <table class="table-git position-a">
+                    <caption class="table-git__caption t-g__c1 bg-red">--tags</caption>
+                </table>
+                <table class="table-git table-git__full position-a scale">
+                    <caption class="table-git__caption t-g__c2 bg-red">--tags</caption>
+                    <tbody>
+                        <tr>
+                            <td class="padding-t padding-b">
+                                <pre class="text-align-l"><b>
+    $ git push origin --tags
+    Counting objects: 1, done.
+    Writing objects: 100% (1/1), 160 bytes | 0 bytes/s, done.
+    Total 1 (delta 0), reused 0 (delta 0)
+    To git@github.com:schacon/simplegit.git
+     * [new tag]         v1.4 -> v1.4
+     * [new tag]         v1.4-lw -> v1.4-lw</b></pre>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <span class="hr-line-short margin_top70"></span>
+            <p><b>Удаление тегов</b></p>
+            <p><b>git tag -d &lt;tagname&gt;</b> - удалить тег в локальном хранилище</p>
+            <div class="table-wrapper position-r">
+                <table class="table-git position-a">
+                    <caption class="table-git__caption t-g__c1 bg-red">локальное удаление тега</caption>
+                </table>
+                <table class="table-git table-git__full position-a scale">
+                    <caption class="table-git__caption t-g__c2 bg-red">локальное удаление тега</caption>
+                    <tbody>
+                        <tr>
+                            <td class="padding-t padding-b">
+                                <pre class="text-align-l"><b>
+    $ git tag -d v1.4-lw
+    Deleted tag 'v1.4-lw' (was e7d5add)</b></pre>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="margin_top70"><b>git push &lt;remote&gt; :refs/tags/&lt;tagname&gt;</b> - удалить тег с удаленного сервера №1</p>
+            <div class="table-wrapper position-r">
+                <table class="table-git position-a">
+                    <caption class="table-git__caption t-g__c1 bg-red">удаление удаленного сервера №1</caption>
+                </table>
+                <table class="table-git table-git__full position-a scale">
+                    <caption class="table-git__caption t-g__c2 bg-red">удаление удаленного сервера №1</caption>
+                    <tbody>
+                        <tr>
+                            <td class="padding-t padding-b">
+                                <pre class="text-align-l"><b>
+    $ git push origin :refs/tags/v1.4-lw
+    To /git@github.com:schacon/simplegit.git
+     - [deleted]         v1.4-lw</b></pre>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="margin_top70"><b>git push &lt;remote&gt; :refs/tags/&lt;tagname&gt;</b> - удалить тег с удаленного сервера №2</p>
+            <span class="hr-line"></span>
+            <p><b> псевдонимы</b></p>
+            <div class="table-wrapper position-r">
+                <table class="table-git position-a">
+                    <caption class="table-git__caption t-g__c1 bg-red">git config</caption>
+                </table>
+                <table class="table-git table-git__full position-a scale">
+                    <caption class="table-git__caption t-g__c2 bg-red">git config</caption>
+                    <tbody>
+                        <tr>
+                            <td class="padding-t padding-b">
+                                <pre class="text-align-l"><b>
+    $ git config --global alias.co checkout
+    $ git config --global alias.br branch
+    $ git config --global alias.ci commit
+    $ git config --global alias.st status
+
+      далее, вместо
+    git commit
+      можно вводить
+    git ci</b></pre>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </section>
     <section class="VSCode">
@@ -226,9 +582,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
         $(function () {
-            $('.pretty-format__caption').click(function () {
-                $('.pretty-format').toggleClass('d-none');
-                $('.table__full').toggleClass('scale_1')
+            $('.table-git__caption').click(function () {
+                $(this).parent().toggleClass("scale");
+                $(this).parent().siblings().toggleClass('scale');
             });
         });
     </script>
