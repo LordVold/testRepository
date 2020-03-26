@@ -19,17 +19,17 @@
             <div class="h2-wrapper bg-red">
                 <h2>git</h2>
             </div>
-            <p><b>ctrl + `</b> - Вызов</p>
+            <p><span class="span-fencing">ctrl + `</span> - Вызов</p>
             <span class="hr-line"></span>
-            <p><b>git config --list</b> - Проверить состояние (выход "Q")</p>
-            <p><b>git help &lt;verb&gt;</b> - Справка</p>
-            <p><b>git add -h</b> - Краткий вывод "help"</p>
-            <p><b>cd C:/Users/user/my_project</b> - Инициализация репозитория в существующем каталоге (--> git init)</p>
-            <p><b>git status</b> - Проверка статуса файлов</p>
-            <p><b>-s (--short)</b> - $ git status -s</p>
-            <p><b>??</b> - Новые файлы, которые не отслеживаются</p>
-            <p><b>A</b> - Новые файлы, которые были добавлены в промежуточную область</p>
-            <p><b>M</b> - Измененные файлы</p>
+            <p><span class="span-fencing">git config --list</span> - Проверить состояние (выход "Q")</p>
+            <p><span class="span-fencing">git help &lt;verb&gt;</span> - Справка</p>
+            <p><span class="span-fencing">git add -h</span> - Краткий вывод "help"</p>
+            <p><span class="span-fencing">cd C:/Users/user/my_project</span> - Инициализация репозитория в существующем каталоге (--> git init)</p>
+            <p><span class="span-fencing">git status</span> - Проверка статуса файлов</p>
+            <p><span class="span-fencing">-s (--short)</span> - $ git status -s</p>
+            <p><span class="span-fencing">??</span> - Новые файлы, которые не отслеживаются</p>
+            <p><span class="span-fencing">A</span> - Новые файлы, которые были добавлены в промежуточную область</p>
+            <p><span class="span-fencing">M</span> - Измененные файлы</p>
             <div class="table-wrapper position-r">
                 <table class="table-git position-a">
                     <caption class="table-git__caption t-g__c1 bg-red"><b>Краткое состояние</b></caption>
@@ -55,14 +55,14 @@
                     </tbody>
                 </table>
             </div>
-            <p class="margin_top70"><b>git add . </b> - Отслеживание новых файлов</p>
-            <p><b>git diff</b> - Чтобы увидеть, что изменили, но еще не поставили</p>
-            <p><b>git diff --staged (--cached)</b> - Эта команда сравнивает поэтапные изменения с последним коммитом</p>
+            <p class="margin_top70"><span class="span-fencing">git add . </span> - Отслеживание новых файлов</p>
+            <p><span class="span-fencing">git diff</span> - Чтобы увидеть, что изменили, но еще не поставили</p>
+            <p><span class="span-fencing">git diff --staged (--cached)</span> - Эта команда сравнивает поэтапные изменения с последним коммитом</p>
             <span class="hr-line"></span>
-            <p><b>git commit -m '...'</b></p>
-            <p><b>git commit -a -m '...'</b> - -a - позволяя пропустить git add</p>
-            <p><b>Отмена вещей</b></p>
-            <p><b>--amend</b> - удалит предыдущий комит, вставляя на его место текущий</p>
+            <p><span class="span-fencing">git commit -m '...'</span></p>
+            <p><span class="span-fencing">git commit -a -m '...'</span> - -a - позволяя пропустить git add</p>
+            <p><span class="span-fencing-title">Отмена вещей</span></p>
+            <p><span class="span-fencing">--amend</span> - удалит предыдущий комит, вставляя на его место текущий</p>
             <div class="table-wrapper position-r">
                 <table class="table-git position-a">
                     <caption class="table-git__caption t-g__c1 bg-red"><b>Замена commit</b></caption>
@@ -83,14 +83,14 @@
                 </table>
             </div>
             <span class="hr-line margin_top70"></span>
-            <p><b>git rm &lt;name of file&gt; (remove)</b> - Выполняет этап удаления файла</p>
-            <p><b>git mv file_from file_to</b> - Переименовать файл в Git</p>
+            <p><span class="span-fencing">git rm &lt;name of file&gt; (remove)</span> - Выполняет этап удаления файла</p>
+            <p><span class="span-fencing">git mv file_from file_to</span> - Переименовать файл в Git</p>
             <span class="hr-line"></span>
-            <p><b>git log . . . :</b></p>
-            <p><b>git log</b> - перечисляет коммиты, сделанные в этом хранилище, в обратном хронологическом порядке; то есть самые последние коммиты появляются первыми</p>
-            <p><b>git log -p (-2)</b> - показывает разницу ( вывод патча ), вносимую в каждый коммит (ограничить количество отображаемых записей журнала, -2 - отображения только последние две)</p>
-            <p><b>git log --stat</b> - некоторые сокращенные статистические данные для каждого коммита</p>
-            <p><b>git log --pretty=format</b> - указать свой собственный формат вывода журнала</p>
+            <p><span class="span-fencing">git log . . . :</span></p>
+            <p><span class="span-fencing">git log</span> - перечисляет коммиты, сделанные в этом хранилище, в обратном хронологическом порядке; то есть самые последние коммиты появляются первыми</p>
+            <p><span class="span-fencing">git log -p (-2)</span> - показывает разницу ( вывод патча ), вносимую в каждый коммит (ограничить количество отображаемых записей журнала, -2 - отображения только последние две)</p>
+            <p><span class="span-fencing">git log --stat</span> - некоторые сокращенные статистические данные для каждого коммита</p>
+            <p><span class="span-fencing">git log --pretty=format</span> - указать свой собственный формат вывода журнала</p>
             <div class="table-wrapper position-r">
                 <table class="table-git position-a">
                     <caption class="table-git__caption t-g__c1 bg-red"><b>--pretty=format:</b></caption>
@@ -166,7 +166,7 @@
                     </tbody>
                 </table>
             </div>
-            <p class="margin_top70"><b>git log --pretty=format:"%h %s" --graph</b> - добавляет симпатичный маленький график ASCII, показывающий вашу ветку и историю слияний</p>
+            <p class="margin_top70"><span class="span-fencing">git log --pretty=format:"%h %s" --graph</span> - добавляет симпатичный маленький график ASCII, показывающий вашу ветку и историю слияний</p>
             <div class="table-wrapper position-r">
                 <table class="table-git position-a">
                     <caption class="table-git__caption t-g__c1 bg-red">Общие варианты <b>git log</b></caption>
@@ -221,7 +221,7 @@
                     </tbody>
                 </table>
             </div>
-            <p class="margin_top70"><b>Ограничение выхода журнала</b></p>
+            <p class="margin_top70"><span class="span-fencing-title">Ограничение выхода журнала</span></p>
             <div class="table-wrapper position-r">
                 <table class="table-git position-a">
                     <caption class="table-git__caption t-g__c1 bg-red">Варианты ограничения выхода <b>git log</b></caption>
@@ -264,11 +264,11 @@
                     </tbody>
                 </table>
             </div>
-            <p class="margin_top70"><b></b></p>
+            <p class="margin_top70"><span class="span-fencing"></span></p>
             <span class="hr-line"></span>
-            <p><b>Tagging</b></p>
-            <p><b> git tag</b> - Список ваших тегов (с необязательным -lили --list)</p>
-            <p><b>Аннотированные метки</b></p>
+            <p><span class="span-fencing-title">Tagging</span></p>
+            <p><span class="span-fencing">git tag</span> - Список ваших тегов (с необязательным -lили --list)</p>
+            <p><span class="span-fencing-title">Аннотированные метки</span></p>
             <div class="table-wrapper position-r">
                 <table class="table-git position-a">
                     <caption class="table-git__caption t-g__c1 bg-red">Аннотированные метки:</caption>
@@ -289,11 +289,11 @@
                     </tbody>
                 </table>
             </div>
-            <p class="margin_top70"><b>git tag -a</b> - Создать аннотированный тег</p>
-            <p><b>git tag -m</b> - Указывает сообщение</p>
-            <p><b>git show (v1.4)</b> - Указывает сообщение</p>
-            <p><b>Легкие метки</b></p>
-            <p><b>git tag &lt;имя тега&gt;</b> - Создать легкий тег</p>
+            <p class="margin_top70"><span class="span-fencing">git tag -a</span> - Создать аннотированный тег</p>
+            <p><span class="span-fencing">git tag -m</span> - Указывает сообщение</p>
+            <p><span class="span-fencing">git show (v1.4)</span> - Указывает сообщение</p>
+            <p><span class="span-fencing-title">Легкие метки</span></p>
+            <p><span class="span-fencing">git tag &lt;имя тега&gt;</span> - Создать легкий тег</p>
             <div class="table-wrapper position-r">
                 <table class="table-git position-a">
                     <caption class="table-git__caption t-g__c1 bg-red">Легкие метки:</caption>
@@ -323,8 +323,7 @@
                     </tbody>
                 </table>
             </div>
-            <span class="hr-line-short margin_top70"></span>
-            <p><b>Пометка позже</b></p>
+            <p class="margin_top70"><span class="span-fencing-title">Пометка позже</span></p>
             <p><b>git tag -a v1.2 9fceb02</b> - Чтобы пометить коммит, можно указываете контрольную сумму коммита (или ее часть) в конце команды</p>
             <div class="table-wrapper position-r">
                 <table class="table-git position-a">
@@ -361,8 +360,7 @@
                     </tbody>
                 </table>
             </div>
-            <span class="hr-line-short margin_top70"></span>
-            <p><b>Обмен тегами</b></p>
+            <p class="margin_top70"><span class="span-fencing-title">Обмен тегами</span></p>
             <p><b>git push origin &lt;tagname&gt;</b> - отправлять теги на общий сервер</p>
             <div class="table-wrapper position-r">
                 <table class="table-git position-a">

@@ -154,6 +154,26 @@ button {
 .text-align-l {
     text-align: left;
 }
+
+.span-fencing {
+    width: 250px;
+    display: inline-block;
+    border-right: 2px solid rgb(238, 94, 94);
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.span-fencing-title {
+    display: inline-block;
+    border-left: 2px solid rgb(238, 94, 94);
+    border-right: 2px solid rgb(238, 94, 94);
+    padding: 8px 30px ;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 20px;
+    background-color: rgba(238, 94, 94, 0.15);
+}
+
 /* ~~~ DEFAULT CLASSES END ~~~ */
 /* ============================================================== */
 /* ~~~ DEFAULT COMPONENT START ~~~ */
@@ -248,6 +268,7 @@ td.padding-b {
     transform: scaleY(0);
     transition: all 0.4s ease 0s;
 }
+
 /* toggle */
 /* table pretty=format end */
 /* ~~~ DEFAULT COMPONENT END ~~~ */
