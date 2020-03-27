@@ -19,17 +19,40 @@
             <div class="h2-wrapper bg-red">
                 <h2>git</h2>
             </div>
-            <p><span class="span-fencing">ctrl + `</span> - Вызов</p>
+            <p><span class="span-fencing">ctrl + `</span> - Вызов терминала</p>
             <span class="hr-line"></span>
             <p><span class="span-fencing">git config --list</span> - Проверить состояние (выход "Q")</p>
             <p><span class="span-fencing">git help &lt;verb&gt;</span> - Справка</p>
             <p><span class="span-fencing">git add -h</span> - Краткий вывод "help"</p>
             <p><span class="span-fencing">cd C:/Users/user/my_project</span> - Инициализация репозитория в существующем каталоге (--> git init)</p>
+            <span class="hr-line"></span>
+            <p><span class="span-fencing-title">SSH-genkey</span></p>
+            <div class="table-wrapper position-r">
+                <table class="table-git position-a">
+                    <caption class="table-git__caption t-g__c1 bg-red"><b>SSH-genkey</b></caption>
+                </table>
+                <table class="table-git table-git__full position-a scale">
+                    <caption class="table-git__caption t-g__c2 bg-red"><b>SSH-genkey</b></caption>
+                    <tbody>
+                        <tr>
+                            <td class="padding-t padding-b">
+                                <pre class="text-align-l">
+    <span class="span-fencing">Git Bash</span>запустить и ввести <b>ssh-genkey</b> enter*3
+    далее открыть сгенерированый файл и скопировать его содержимое
+    <span class="span-fencing">Github</span>зайти в settings -> SSH and GPG keys -> создать ключ
+    <span class="span-fencing-title">в терминале</span>
+    <span class="span-fencing">cd D:\directory\directory</span>создать папку
+    <span class="span-fencing">git clone</span>далее скопировать пароль github -> Clone and download
+    (git clone git@github.com:LordVold/testRepository.git)
+    <span class="span-fencing">dir -> cd D:... -> git status</span>
+</pre>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <span class="hr-line margin_top70"></span>
             <p><span class="span-fencing">git status</span> - Проверка статуса файлов</p>
-            <p><span class="span-fencing">-s (--short)</span> - $ git status -s</p>
-            <p><span class="span-fencing">??</span> - Новые файлы, которые не отслеживаются</p>
-            <p><span class="span-fencing">A</span> - Новые файлы, которые были добавлены в промежуточную область</p>
-            <p><span class="span-fencing">M</span> - Измененные файлы</p>
             <div class="table-wrapper position-r">
                 <table class="table-git position-a">
                     <caption class="table-git__caption t-g__c1 bg-red"><b>Краткое состояние</b></caption>
@@ -47,10 +70,23 @@
   M  lib/simplegit.rb
   ?? LICENSE.txt</b></pre>
                             </td>
-                            <td class="padding-t padding-b">Новые файлы, которые не отслеживаются, имеют ??рядом с собой, новые файлы, которые были добавлены в промежуточную область, имеют A,
-                                измененные файлы имеют Mи так далее. Выходные данные состоят из двух столбцов - левый столбец показывает состояние промежуточной области, а правый столбец - состояние
-                                рабочего дерева. Так, например, в этом выводе READMEфайл изменяется в рабочем каталоге, но еще не подготовлен, а lib/simplegit.rbфайл изменяется и подготовлен. Он
-                                Rakefileбыл изменен, подготовлен и затем снова изменен, поэтому в него вносятся изменения, как поэтапные, так и неустановленные.</td>
+                            <td class="padding-t padding-b">Новые файлы, которые не отслеживаются, имеют рядом с собой - <b>"??"</b>, новые файлы, которые были добавлены в промежуточную область, имеют
+                                <b>"A"</b>,
+                                измененные файлы имеют <b>"M"</b> и так далее. Выходные данные состоят из двух столбцов - левый столбец показывает состояние промежуточной области, а правый столбец -
+                                состояние
+                                рабочего дерева. Так, например, в этом выводе <b>README</b> файл изменяется в рабочем каталоге, но еще не подготовлен, а <b>lib/simplegit.rb</b> файл изменяется и
+                                подготовлен. А
+                                <b>Rakefile</b> был изменен, подготовлен и затем снова изменен, поэтому в него вносятся изменения, как поэтапные, так и неустановленные.</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <pre class="text-align-l">
+<span class="span-fencing">-s (--short)</span> - git status -s
+<span class="span-fencing">??</span> - Новые файлы, которые не отслеживаются
+<span class="span-fencing">A</span> - Новые файлы, которые были добавлены в промежуточную область
+<span class="span-fencing">M</span> - Измененные файлы
+                                </pre>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
@@ -59,7 +95,7 @@
             <p><span class="span-fencing">git diff</span> - Чтобы увидеть, что изменили, но еще не поставили</p>
             <p><span class="span-fencing">git diff --staged (--cached)</span> - Эта команда сравнивает поэтапные изменения с последним коммитом</p>
             <span class="hr-line"></span>
-            <p><span class="span-fencing">git commit -m '...'</span></p>
+            <p><span class="span-fencing">git commit -m '...'</span> - -m (message)</p>
             <p><span class="span-fencing">git commit -a -m '...'</span> - -a - позволяя пропустить git add</p>
             <p><span class="span-fencing-title">Отмена вещей</span></p>
             <p><span class="span-fencing">--amend</span> - удалит предыдущий комит, вставляя на его место текущий</p>
@@ -86,9 +122,9 @@
             <p><span class="span-fencing">git rm &lt;name of file&gt; (remove)</span> - Выполняет этап удаления файла</p>
             <p><span class="span-fencing">git mv file_from file_to</span> - Переименовать файл в Git</p>
             <span class="hr-line"></span>
-            <p><span class="span-fencing">git log . . . :</span></p>
             <p><span class="span-fencing">git log</span> - перечисляет коммиты, сделанные в этом хранилище, в обратном хронологическом порядке; то есть самые последние коммиты появляются первыми</p>
-            <p><span class="span-fencing">git log -p (-2)</span> - показывает разницу ( вывод патча ), вносимую в каждый коммит (ограничить количество отображаемых записей журнала, -2 - отображения только последние две)</p>
+            <p><span class="span-fencing">git log -p (-2)</span> - показывает разницу ( вывод патча ), вносимую в каждый коммит (ограничить количество отображаемых записей журнала, -2 - отображения
+                только последние две)</p>
             <p><span class="span-fencing">git log --stat</span> - некоторые сокращенные статистические данные для каждого коммита</p>
             <p><span class="span-fencing">git log --pretty=format</span> - указать свой собственный формат вывода журнала</p>
             <div class="table-wrapper position-r">
@@ -166,7 +202,8 @@
                     </tbody>
                 </table>
             </div>
-            <p class="margin_top70"><span class="span-fencing">git log --pretty=format:"%h %s" --graph</span> - добавляет симпатичный маленький график ASCII, показывающий вашу ветку и историю слияний</p>
+            <p class="margin_top70"><span class="span-fencing">git log --pretty=format:"%h %s" --graph</span> - добавляет симпатичный маленький график ASCII, показывающий вашу ветку и историю слияний
+            </p>
             <div class="table-wrapper position-r">
                 <table class="table-git position-a">
                     <caption class="table-git__caption t-g__c1 bg-red">Общие варианты <b>git log</b></caption>
@@ -264,8 +301,7 @@
                     </tbody>
                 </table>
             </div>
-            <p class="margin_top70"><span class="span-fencing"></span></p>
-            <span class="hr-line"></span>
+            <span class="hr-line margin_top70"></span>
             <p><span class="span-fencing-title">Tagging</span></p>
             <p><span class="span-fencing">git tag</span> - Список ваших тегов (с необязательным -lили --list)</p>
             <p><span class="span-fencing-title">Аннотированные метки</span></p>
@@ -324,7 +360,7 @@
                 </table>
             </div>
             <p class="margin_top70"><span class="span-fencing-title">Пометка позже</span></p>
-            <p><b>git tag -a v1.2 9fceb02</b> - Чтобы пометить коммит, можно указываете контрольную сумму коммита (или ее часть) в конце команды</p>
+            <p><span class="span-fencing">git tag -a v1.2 9fceb02</span> - Чтобы пометить коммит, можно указываете контрольную сумму коммита (или ее часть) в конце команды</p>
             <div class="table-wrapper position-r">
                 <table class="table-git position-a">
                     <caption class="table-git__caption t-g__c1 bg-red">Пометка позже</caption>
@@ -361,7 +397,7 @@
                 </table>
             </div>
             <p class="margin_top70"><span class="span-fencing-title">Обмен тегами</span></p>
-            <p><b>git push origin &lt;tagname&gt;</b> - отправлять теги на общий сервер</p>
+            <p><span class="span-fencing">git push origin &lt;tagname&gt;</span> - отправлять теги на общий сервер</p>
             <div class="table-wrapper position-r">
                 <table class="table-git position-a">
                     <caption class="table-git__caption t-g__c1 bg-red">Обмен тегами</caption>
@@ -385,7 +421,7 @@
                     </tbody>
                 </table>
             </div>
-            <p class="margin_top70"><b>--tags</b> - Если есть много тегов</p>
+            <p class="margin_top70"><span class="span-fencing">--tags</span> - Если есть много тегов</p>
             <div class="table-wrapper position-r">
                 <table class="table-git position-a">
                     <caption class="table-git__caption t-g__c1 bg-red">--tags</caption>
@@ -408,9 +444,8 @@
                     </tbody>
                 </table>
             </div>
-            <span class="hr-line-short margin_top70"></span>
-            <p><b>Удаление тегов</b></p>
-            <p><b>git tag -d &lt;tagname&gt;</b> - удалить тег в локальном хранилище</p>
+            <p><span class="span-fencing-title margin_top70">Удаление тегов</span></p>
+            <p><span class="span-fencing">git tag -d &lt;tagname&gt;</span> - удалить тег в локальном хранилище</p>
             <div class="table-wrapper position-r">
                 <table class="table-git position-a">
                     <caption class="table-git__caption t-g__c1 bg-red">локальное удаление тега</caption>
@@ -428,7 +463,7 @@
                     </tbody>
                 </table>
             </div>
-            <p class="margin_top70"><b>git push &lt;remote&gt; :refs/tags/&lt;tagname&gt;</b> - удалить тег с удаленного сервера №1</p>
+            <p class="margin_top70"><span class="span-fencing">git push &lt;remote&gt; :refs/tags/&lt;tagname&gt;</span> - удалить тег с удаленного сервера №1</p>
             <div class="table-wrapper position-r">
                 <table class="table-git position-a">
                     <caption class="table-git__caption t-g__c1 bg-red">удаление удаленного сервера №1</caption>
@@ -447,9 +482,9 @@
                     </tbody>
                 </table>
             </div>
-            <p class="margin_top70"><b>git push &lt;remote&gt; :refs/tags/&lt;tagname&gt;</b> - удалить тег с удаленного сервера №2</p>
+            <p class="margin_top70"><span class="span-fencing">git push &lt;remote&gt; :refs/tags/&lt;tagname&gt;</span> - удалить тег с удаленного сервера №2</p>
             <span class="hr-line"></span>
-            <p><b> псевдонимы</b></p>
+            <p><span class="span-fencing-title">псевдонимы</span></p>
             <div class="table-wrapper position-r">
                 <table class="table-git position-a">
                     <caption class="table-git__caption t-g__c1 bg-red">git config</caption>
@@ -481,38 +516,38 @@
             <div class="h2-wrapper bg-blue">
                 <h2>Visual Studio Code</h2>
             </div>
-            <p><b>Ctrl + Shift + P</b> — вызов палитры команд.</p>
-            <p><b>Ctrl + P</b> — открытие командной строки без флагов.</p>
-            <p><b>Ctrl + T</b> — поиск символа ( название ф-ции )</p>
-            <p><b>Ctrl + ,</b> — переход в окно настроек.</p>
-            <p><b>Ctrl + B</b> — переключение видимости панели управления.</p>
-            <p><b>Ctrl + `</b> — переключение видимости терминала.</p>
-            <p><b>F11</b> — полноэкранный режим.</p>
-            <p><b>Ctrl + (Mouse wheel)</b> — переключение масштаба (<b>“editor.mouseWheelZoom”: true,</b> - чтобы работал зум на колесико мыши).</p>
-            <p><b>Ctrl + K, Z</b> — Zen mode.</p>
+            <p><span class="span-fencing">Ctrl + Shift + P</span> — вызов палитры команд.</p>
+            <p><span class="span-fencing">Ctrl + P</span> — открытие командной строки без флагов.</p>
+            <p><span class="span-fencing">Ctrl + T</span> — поиск символа ( название ф-ции )</p>
+            <p><span class="span-fencing">Ctrl + ,</span> — переход в окно настроек.</p>
+            <p><span class="span-fencing">Ctrl + B</span> — переключение видимости панели управления.</p>
+            <p><span class="span-fencing">Ctrl + `</span> — переключение видимости терминала.</p>
+            <p><span class="span-fencing">F11</span> — полноэкранный режим.</p>
+            <p><span class="span-fencing">Ctrl + (Mouse wheel)</span> — переключение масштаба (<b>“editor.mouseWheelZoom”: true,</b> - чтобы работал зум на колесико мыши).</p>
+            <p><span class="span-fencing">Ctrl + K, Z</span> — Zen mode.</p>
             <span class="hr-line"></span>
-            <p><b>Сворачивание групп</b></p>
-            <p><b>Fold All</b></p>
-            <p><b>Ctrl + K Ctrl + 0</b> — сворачивание всех раскрываемых блоков.</p>
-            <p><b>Unfold All</b></p>
-            <p><b>Ctrl + K Ctrl + J</b> — раскрытие всех раскрываемых блоков.</p>
+            <p><span class="span-fencing">Сворачивание групп</span></p>
+            <p><span class="span-fencing">Fold All</span></p>
+            <p><span class="span-fencing">Ctrl + K Ctrl + 0</span> — сворачивание всех раскрываемых блоков.</p>
+            <p><span class="span-fencing">Unfold All</span></p>
+            <p><span class="span-fencing">Ctrl + K Ctrl + J</span> — раскрытие всех раскрываемых блоков.</p>
             <span class="hr-line"></span>
-            <p><b>Ctrl + Shift + [</b> — Свернуть внутреннюю область возле курсора.</p>
-            <p><b>Ctrl + Shift + ]</b> — Развернуть внутреннюю область возле курсора.</p>
+            <p><span class="span-fencing">Ctrl + Shift + [</span> — Свернуть внутреннюю область возле курсора.</p>
+            <p><span class="span-fencing">Ctrl + Shift + ]</span> — Развернуть внутреннюю область возле курсора.</p>
             <span class="hr-line"></span>
-            <p><b>Alt</b> — несколько курсоров.</p>
-            <p><b>Ctrl + Alt + Arrow</b> — несколько курсоров.</p>
-            <p><b>Ctrl (Fn) + F2 ( Ctrl + Shift +L )</b> — выбрать все слова.</p>
-            <p><b>Ctrl + D</b> — выбрать слова.</p>
-            <p><b>Ctrl + U</b> — отменить выбор слова.</p>
-            <p><b>Alt + Shift + (Drag mouse)</b> — колоночное выделение.</p>
-            <p><b>Alt + Ctrl + (Drag mouse)</b> — выделение строк.</p>
-            <p><b>Alt + Arrow</b> — перемещение строки.</p>
-            <p><b>Shift + Alt + Arrow</b> — копирование строки.</p>
+            <p><span class="span-fencing">Alt</span> — несколько курсоров.</p>
+            <p><span class="span-fencing">Ctrl + Alt + Arrow</span> — несколько курсоров.</p>
+            <p><span class="span-fencing">Ctrl (Fn) + F2 ( Ctrl + Shift +L )</span> — выбрать все слова.</p>
+            <p><span class="span-fencing">Ctrl + D</span> — выбрать слова.</p>
+            <p><span class="span-fencing">Ctrl + U</span> — отменить выбор слова.</p>
+            <p><span class="span-fencing">Alt + Shift + (Drag mouse)</span> — колоночное выделение.</p>
+            <p><span class="span-fencing">Alt + Ctrl + (Drag mouse)</span> — выделение строк.</p>
+            <p><span class="span-fencing">Alt + Arrow</span> — перемещение строки.</p>
+            <p><span class="span-fencing">Shift + Alt + Arrow</span> — копирование строки.</p>
             <span class="hr-line"></span>
-            <p><b>Ctrl + /</b> — вставка строчного комментария.</p>
-            <p><b>Shift + Alt + A</b> — вставка блочного комментария.</p>
-            <p><b>.inner|c</b> — комментарий с закрывающим тегом</p>
+            <p><span class="span-fencing">Ctrl + /</span> — вставка строчного комментария.</p>
+            <p><span class="span-fencing">Shift + Alt + A</span> — вставка блочного комментария.</p>
+            <p><span class="span-fencing">.inner|c</span> — комментарий с закрывающим тегом</p>
         </div>
     </section>
     <section class="photoshop">
@@ -520,8 +555,8 @@
             <div class="h2-wrapper bg-aqua-blue">
                 <h2>PhotoShop</h2>
             </div>
-            <p><b>Ctrl + H</b> - убрать сетку.</p>
-            <p><b>(перемещение) V + Alt + right-button </b> - выбрать слой</p>
+            <p><span class="span-fencing">Ctrl + H</span> - убрать сетку.</p>
+            <p><span class="span-fencing">(перемещение) V + Alt + right-button</span> - выбрать слой</p>
         </div>
     </section>
     <section class="settings_json">

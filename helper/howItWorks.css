@@ -216,6 +216,8 @@ button {
 
 .table-git__full {
     z-index: 1;
+    width: 900px;
+    max-width: 80%;
 }
 
 .table-git caption {
