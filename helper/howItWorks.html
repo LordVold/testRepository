@@ -26,22 +26,22 @@
             <p><span class="span-fencing">git add -h</span> - Краткий вывод "help"</p>
             <p><span class="span-fencing">cd C:/Users/user/my_project</span> - Инициализация репозитория в существующем каталоге (--> git init)</p>
             <span class="hr-line"></span>
-            <p><span class="span-fencing-title">SSH-genkey</span></p>
+            <p><span class="span-fencing-title">SSH-keygen</span></p>
             <div class="table-wrapper position-r">
                 <table class="table-git position-a">
-                    <caption class="table-git__caption t-g__c1 bg-red"><b>SSH-genkey</b></caption>
+                    <caption class="table-git__caption t-g__c1 bg-red"><b>SSH-keygen</b></caption>
                 </table>
                 <table class="table-git table-git__full position-a scale">
-                    <caption class="table-git__caption t-g__c2 bg-red"><b>SSH-genkey</b></caption>
+                    <caption class="table-git__caption t-g__c2 bg-red"><b>SSH-keygen</b></caption>
                     <tbody>
                         <tr>
                             <td class="padding-t padding-b">
                                 <pre class="text-align-l">
-    <span class="span-fencing">Git Bash</span>запустить и ввести <b>ssh-genkey</b> enter*3
-    далее открыть сгенерированый файл и скопировать его содержимое
+    <span class="span-fencing">Git Bash</span>запустить и ввести <b>ssh-keygen</b> enter*4
+    далее открыть сгенерированый файл (id_rsa.pub) и скопировать его содержимое
     <span class="span-fencing">Github</span>зайти в settings -> SSH and GPG keys -> создать ключ
     <span class="span-fencing-title">в терминале</span>
-    <span class="span-fencing">cd D:\directory\directory</span>создать папку
+    <span class="span-fencing">cd D:\directory\directory</span>выбираем папку, где будет содержаться repository
     <span class="span-fencing">git clone</span>далее скопировать пароль github -> Clone and download
     (git clone git@github.com:LordVold/testRepository.git)
     <span class="span-fencing">dir -> cd D:... -> git status</span>
@@ -119,12 +119,46 @@
                 </table>
             </div>
             <span class="hr-line margin_top70"></span>
+            <p><span class="span-fencing">git push</span> - отправить на сервер после <b>commit</b></p>
+            <span class="hr-line"></span>
+            <p><span class="span-fencing-title">branches</span></p>
+            <p><span class="span-fencing">git branch testing</span> - Создание новой ветки</p>
+            <p><span class="span-fencing">git checkout testing</span> - Переключение веток</p>
+            <p><span class="span-fencing">git checkout -b testing</span> - Сокращение предыдущих двух команд</p>
+            <p><span class="span-fencing">git branch -d testing</span> - Удалить ветку</p>
+            <p><span class="span-fencing-title">Основное слияние</span></p>
+            <div class="table-wrapper position-r">
+                <table class="table-git position-a">
+                    <caption class="table-git__caption t-g__c1 bg-red">Основное слияние</caption>
+                </table>
+                <table class="table-git table-git__full position-a scale">
+                    <caption class="table-git__caption t-g__c2 bg-red">Основное слияние</caption>
+                    <tbody>
+                        <tr>
+                            <td class="padding-t padding-b">
+                                <pre class="text-align-l"><b>
+    $ git checkout master
+    Switched to branch 'master'
+    $ git merge iss53
+    Merge made by the 'recursive' strategy.
+    index.html |    1 +
+    1 file changed, 1 insertion(+)</b></pre>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <span class="hr-line margin_top70"></span>
+            <p><span class="span-fencing-title">git pull</span> - Последовательность двух команд: git fetch и git merge. Команда автоматически сливает коммиты, не давая, сначала просмотреть их</p>
+            <p><span class="span-fencing-title">git fetch</span> - При использовании fetch, git собирает все коммиты из целевой ветки, которых нет в текущей ветке, и сохраняет их в локальном репозитории</p>
+            <span class="hr-line"></span>
             <p><span class="span-fencing">git rm &lt;name of file&gt; (remove)</span> - Выполняет этап удаления файла</p>
             <p><span class="span-fencing">git mv file_from file_to</span> - Переименовать файл в Git</p>
             <span class="hr-line"></span>
             <p><span class="span-fencing">git log</span> - перечисляет коммиты, сделанные в этом хранилище, в обратном хронологическом порядке; то есть самые последние коммиты появляются первыми</p>
-            <p><span class="span-fencing">git log -p (-2)</span> - показывает разницу ( вывод патча ), вносимую в каждый коммит (ограничить количество отображаемых записей журнала, -2 - отображения
-                только последние две)</p>
+            <p><span class="span-fencing">git log &lt;name&gt; (--all)</span> - посмотреть конкретную ветку или все</p>
+            <p><span class="span-fencing">git log -p (-2)</span> - показывает разницу (вывод патча), вносимую в каждый коммит (ограничить количество отображаемых записей журнала, -2 - отображение
+                только последних двух)</p>
             <p><span class="span-fencing">git log --stat</span> - некоторые сокращенные статистические данные для каждого коммита</p>
             <p><span class="span-fencing">git log --pretty=format</span> - указать свой собственный формат вывода журнала</p>
             <div class="table-wrapper position-r">
