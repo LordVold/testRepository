@@ -14,6 +14,126 @@
 </head>
 
 <body>
+    <section class="js">
+        <div class="container bg-yellow">
+            <div class="h2-wrapper bg-red">
+                <h2>JS</h2>
+            </div>
+            <p class="not-text-indent"><span class="span-fencing-title">string</span></p>
+            <p><span class="span-fencing">string.length</span> - длина строки -> string.length - 1</p>
+            <p><span class="span-fencing">string.chartAt(n)</span> - возвращает указанный символ из строки (n - целое число от 0 до длины строки минус 1)</p>
+            <p><span class="span-fencing">string.string[n]</span> - возвращает указанный символ из строки (n - целое число от 0 до длины строки минус 1)</p>
+            <p><span class="span-fencing">string.substring(n)</span> - часть строки от n до конца. Вторым параметром указывается до какого индекса выборка <b>(n,m)</b></p>
+            <p><span class="span-fencing">string.slice(-n)</span> - тоже, что и верхний пример, но благодаря "-" номирация происходит с конца</p>
+            <p><span class="span-fencing">string.substr(n,m)</span> - n - индекс начала, m - число символов</p>
+            <p><span class="span-fencing">string.indexOf("n")</span> - поиск символа или слова</p>
+            <p><span class="span-fencing">string.lastIndexOf("n")</span> - поиск с конца</p>
+            <p><span class="span-fencing">string.replace("n","m")</span> - замена n на m</p>
+            <p><span class="span-fencing">string.split(" ")</span> - выбираем разделитель, например пробел и разбиваем строку на масив</p>
+            <p><span class="span-fencing">string.toUpperCase()</span> - верхний регистр</p>
+            <p><span class="span-fencing">string.toLowerCase()</span> - нижний регистр</p>
+            <span class="hr-line"></span>
+            <p class="not-text-indent"><span class="span-fencing-title">boolean</span></p>
+            <p><span class="span-fencing">boolean(n)</span> - true or false</p>
+            <div class="table-wrapper position-r">
+                <table class="table-hide position-a">
+                    <caption class="table-hide__caption t-g__c1 bg-red"><b>boolean</b></caption>
+                </table>
+                <table class="table-hide table-hide__full position-a scale">
+                    <caption class="table-hide__caption t-g__c2 bg-red"><b>boolean</b></caption>
+                    <tbody>
+                        <tr>
+                            <td class="padding-t padding-b text-align-l">
+                                boolean(undefined)<br />
+                                boolean(null)<br />
+                                boolean(0)<br />
+                                boolean(NaN)<br />
+                                boolean("")
+                            </td>
+                            <td class="padding-t padding-b">
+                                -> false<br />
+                                -> false<br />
+                                -> false<br />
+                                -> false<br />
+                                -> false. ([]), ({}) -> true
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="not-text-indent margin-top70"><span class="span-fencing-title">Логические операторы</span></p>
+            <div class="table-wrapper position-r">
+                <table class="table-hide position-a">
+                    <caption class="table-hide__caption t-g__c1 bg-red">логическое "и": <b>&&</b></caption>
+                </table>
+                <table class="table-hide table-hide__full position-a scale">
+                    <caption class="table-hide__caption t-g__c2 bg-red">логическое "и": <b>&&</b></caption>
+                    <tbody>
+                        <tr>
+                            <td class="padding-t padding-b text-align-l">
+                                true && false<br />
+                                false && true<br />
+                                true && true
+                            </td>
+                            <td class="padding-t padding-b">
+                                -> false<br />
+                                -> false<br />
+                                -> true<br />
+                                -> возвращает истину, когда оба операнда - истина<br />
+                                -> возврат справа
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="table-wrapper position-r margin-top70">
+                <table class="table-hide position-a">
+                    <caption class="table-hide__caption t-g__c1 bg-red">логическое "или": <b>||</b></caption>
+                </table>
+                <table class="table-hide table-hide__full position-a scale">
+                    <caption class="table-hide__caption t-g__c2 bg-red">логическое "или": <b>||</b></caption>
+                    <tbody>
+                        <tr>
+                            <td class="padding-t padding-b text-align-l">
+                                false || false<br />
+                                true || false<br />
+                                false || true
+                            </td>
+                            <td class="padding-t padding-b">
+                                -> false<br />
+                                -> true<br />
+                                -> true<br />
+                                -> возвращает истину, коггда хотябы лодин операнд - истина<br />
+                                -> возврат слева
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="table-wrapper position-r margin-top130">
+                <table class="table-hide position-a">
+                    <caption class="table-hide__caption t-g__c1 bg-red">логическое отрицпние: <b>!</b></caption>
+                </table>
+                <table class="table-hide table-hide__full position-a scale">
+                    <caption class="table-hide__caption t-g__c2 bg-red">логическое отрицпние: <b>!</b></caption>
+                    <tbody>
+                        <tr>
+                            <td class="padding-t padding-b text-align-l">
+                                !true<br />
+                                !false
+                            </td>
+                            <td class="padding-t padding-b">
+                                -> false<br />
+                                -> true
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p><span class="span-fencing margin-top70">b</span> - true or false</p>
+            <span class="hr-line"></span>
+        </div>
+    </section>
     <section class="git">
         <div class="container bg-red">
             <div class="h2-wrapper bg-red">
@@ -24,13 +144,13 @@
             <p><span class="span-fencing">git add -h</span> - Краткий вывод "help"</p>
             <p><span class="span-fencing">cd C:/Users/user/my_project</span> - Инициализация репозитория в существующем каталоге (--> git init)</p>
             <span class="hr-line"></span>
-            <p><span class="span-fencing-title">SSH-keygen</span></p>
+            <p class="not-text-indent"><span class="span-fencing-title">SSH-keygen</span></p>
             <div class="table-wrapper position-r">
-                <table class="table-git position-a">
-                    <caption class="table-git__caption t-g__c1 bg-red"><b>SSH-keygen</b></caption>
+                <table class="table-hide position-a">
+                    <caption class="table-hide__caption t-g__c1 bg-red"><b>SSH-keygen</b></caption>
                 </table>
-                <table class="table-git table-git__full position-a scale">
-                    <caption class="table-git__caption t-g__c2 bg-red"><b>SSH-keygen</b></caption>
+                <table class="table-hide table-hide__full position-a scale">
+                    <caption class="table-hide__caption t-g__c2 bg-red"><b>SSH-keygen</b></caption>
                     <tbody>
                         <tr>
                             <td class="padding-t padding-b">
@@ -49,14 +169,14 @@
                     </tbody>
                 </table>
             </div>
-            <span class="hr-line margin_top70"></span>
+            <span class="hr-line margin-top70"></span>
             <p><span class="span-fencing">git status</span> - Проверка статуса файлов</p>
             <div class="table-wrapper position-r">
-                <table class="table-git position-a">
-                    <caption class="table-git__caption t-g__c1 bg-red"><b>Краткое состояние</b></caption>
+                <table class="table-hide position-a">
+                    <caption class="table-hide__caption t-g__c1 bg-red">Краткое состояние</caption>
                 </table>
-                <table class="table-git table-git__full position-a scale">
-                    <caption class="table-git__caption t-g__c2 bg-red"><b>Краткое состояние</b></caption>
+                <table class="table-hide table-hide__full position-a scale">
+                    <caption class="table-hide__caption t-g__c2 bg-red">Краткое состояние</caption>
                     <tbody>
                         <tr>
                             <td class="padding-t padding-b">
@@ -89,20 +209,21 @@
                     </tbody>
                 </table>
             </div>
-            <p class="margin_top70"><span class="span-fencing">git add . </span> - Отслеживание новых файлов</p>
+            <p class="margin-top70"><span class="span-fencing">git add . </span> - Отслеживание новых файлов</p>
             <p><span class="span-fencing">git diff</span> - Чтобы увидеть, что изменили, но еще не поставили</p>
+
             <p><span class="span-fencing">git diff --staged (--cached)</span> - Эта команда сравнивает поэтапные изменения с последним коммитом</p>
             <span class="hr-line"></span>
             <p><span class="span-fencing">git commit -m '...'</span> - -m (message)</p>
             <p><span class="span-fencing">git commit -a -m '...'</span> - -a - позволяя пропустить git add</p>
-            <p><span class="span-fencing-title">Отмена вещей</span></p>
+            <p class="not-text-indent"><span class="span-fencing-title">Отмена вещей</span></p>
             <p><span class="span-fencing">--amend</span> - удалит предыдущий комит, вставляя на его место текущий</p>
             <div class="table-wrapper position-r">
-                <table class="table-git position-a">
-                    <caption class="table-git__caption t-g__c1 bg-red"><b>Замена commit</b></caption>
+                <table class="table-hide position-a">
+                    <caption class="table-hide__caption t-g__c1 bg-red">Замена <b>commit</b></caption>
                 </table>
-                <table class="table-git table-git__full position-a scale">
-                    <caption class="table-git__caption t-g__c2 bg-red"><b>Замена commit</b></caption>
+                <table class="table-hide table-hide__full position-a scale">
+                    <caption class="table-hide__caption t-g__c2 bg-red">Замена <b>commit</b></caption>
                     <tbody>
                         <tr>
                             <td class="padding-t padding-b">
@@ -116,21 +237,21 @@
                     </tbody>
                 </table>
             </div>
-            <span class="hr-line margin_top70"></span>
+            <span class="hr-line margin-top70"></span>
             <p><span class="span-fencing">git push</span> - отправить на сервер после <b>commit</b></p>
             <span class="hr-line"></span>
-            <p><span class="span-fencing-title">branches</span></p>
+            <p class="not-text-indent"><span class="span-fencing-title">branches</span></p>
             <p><span class="span-fencing">git branch testing</span> - Создание новой ветки</p>
             <p><span class="span-fencing">git checkout testing</span> - Переключение веток</p>
             <p><span class="span-fencing">git checkout -b testing</span> - Сокращение предыдущих двух команд</p>
             <p><span class="span-fencing">git branch -d testing</span> - Удалить ветку</p>
-            <p><span class="span-fencing-title">Основное слияние</span></p>
+            <p class="not-text-indent"><span class="span-fencing-title">Основное слияние</span></p>
             <div class="table-wrapper position-r">
-                <table class="table-git position-a">
-                    <caption class="table-git__caption t-g__c1 bg-red">Основное слияние</caption>
+                <table class="table-hide position-a">
+                    <caption class="table-hide__caption t-g__c1 bg-red">Основное слияние</caption>
                 </table>
-                <table class="table-git table-git__full position-a scale">
-                    <caption class="table-git__caption t-g__c2 bg-red">Основное слияние</caption>
+                <table class="table-hide table-hide__full position-a scale">
+                    <caption class="table-hide__caption t-g__c2 bg-red">Основное слияние</caption>
                     <tbody>
                         <tr>
                             <td class="padding-t padding-b">
@@ -146,9 +267,12 @@
                     </tbody>
                 </table>
             </div>
-            <span class="hr-line margin_top70"></span>
-            <p><span class="span-fencing-title">git pull</span> - Последовательность двух команд: git fetch и git merge. Команда автоматически сливает коммиты, не давая, сначала просмотреть их</p>
-            <p><span class="span-fencing-title">git fetch</span> - При использовании fetch, git собирает все коммиты из целевой ветки, которых нет в текущей ветке, и сохраняет их в локальном репозитории</p>
+            <span class="hr-line margin-top70"></span>
+            <p class="not-text-indent"><span class="span-fencing-title">git pull</span> - Последовательность двух команд: git fetch и git merge. Команда автоматически сливает коммиты, не давая,
+                сначала просмотреть их</p>
+            <p class="not-text-indent"><span class="span-fencing-title">git fetch</span> - При использовании fetch, git собирает все коммиты из целевой ветки, которых нет в текущей ветке, и сохраняет
+                их в локальном
+                репозитории</p>
             <span class="hr-line"></span>
             <p><span class="span-fencing">git rm &lt;name of file&gt; (remove)</span> - Выполняет этап удаления файла</p>
             <p><span class="span-fencing">git mv file_from file_to</span> - Переименовать файл в Git</p>
@@ -160,11 +284,11 @@
             <p><span class="span-fencing">git log --stat</span> - некоторые сокращенные статистические данные для каждого коммита</p>
             <p><span class="span-fencing">git log --pretty=format</span> - указать свой собственный формат вывода журнала</p>
             <div class="table-wrapper position-r">
-                <table class="table-git position-a">
-                    <caption class="table-git__caption t-g__c1 bg-red"><b>--pretty=format:</b></caption>
+                <table class="table-hide position-a">
+                    <caption class="table-hide__caption t-g__c1 bg-red"><b>--pretty=format:</b></caption>
                 </table>
-                <table class="table-git table-git__full position-a scale">
-                    <caption class="table-git__caption t-g__c2 bg-red"><b>--pretty=format:</b></caption>
+                <table class="table-hide table-hide__full position-a scale">
+                    <caption class="table-hide__caption t-g__c2 bg-red"><b>--pretty=format:</b></caption>
                     <tbody>
                         <tr>
                             <th>вариант</th>
@@ -234,14 +358,14 @@
                     </tbody>
                 </table>
             </div>
-            <p class="margin_top70"><span class="span-fencing">git log --pretty=format:"%h %s" --graph</span> - добавляет симпатичный маленький график ASCII, показывающий вашу ветку и историю слияний
+            <p class="margin-top70"><span class="span-fencing">git log --pretty=format:"%h %s" --graph</span> - добавляет симпатичный маленький график ASCII, показывающий вашу ветку и историю слияний
             </p>
             <div class="table-wrapper position-r">
-                <table class="table-git position-a">
-                    <caption class="table-git__caption t-g__c1 bg-red">Общие варианты <b>git log</b></caption>
+                <table class="table-hide position-a">
+                    <caption class="table-hide__caption t-g__c1 bg-red">Общие варианты <b>git log</b></caption>
                 </table>
-                <table class="table-git table-git__full position-a scale">
-                    <caption class="table-git__caption t-g__c2 bg-red">Общие варианты <b>git log</b></caption>
+                <table class="table-hide table-hide__full position-a scale">
+                    <caption class="table-hide__caption t-g__c2 bg-red">Общие варианты <b>git log</b></caption>
                     <tbody>
                         <tr>
                             <th>вариант</th>
@@ -290,13 +414,13 @@
                     </tbody>
                 </table>
             </div>
-            <p class="margin_top70"><span class="span-fencing-title">Ограничение выхода журнала</span></p>
+            <p class="not-text-indent margin-top70"><span class="span-fencing-title">Ограничение выхода журнала</span></p>
             <div class="table-wrapper position-r">
-                <table class="table-git position-a">
-                    <caption class="table-git__caption t-g__c1 bg-red">Варианты ограничения выхода <b>git log</b></caption>
+                <table class="table-hide position-a">
+                    <caption class="table-hide__caption t-g__c1 bg-red">Варианты ограничения выхода <b>git log</b></caption>
                 </table>
-                <table class="table-git table-git__full position-a scale">
-                    <caption class="table-git__caption t-g__c2 bg-red">Варианты ограничения выхода <b>git log</b></caption>
+                <table class="table-hide table-hide__full position-a scale">
+                    <caption class="table-hide__caption t-g__c2 bg-red">Варианты ограничения выхода <b>git log</b></caption>
                     <tbody>
                         <tr>
                             <th>вариант</th>
@@ -333,16 +457,16 @@
                     </tbody>
                 </table>
             </div>
-            <span class="hr-line margin_top70"></span>
-            <p><span class="span-fencing-title">Tagging</span></p>
+            <span class="hr-line margin-top70"></span>
+            <p class="not-text-indent"><span class="span-fencing-title">Tagging</span></p>
             <p><span class="span-fencing">git tag</span> - Список ваших тегов (с необязательным -lили --list)</p>
-            <p><span class="span-fencing-title">Аннотированные метки</span></p>
+            <p class="not-text-indent"><span class="span-fencing-title">Аннотированные метки</span></p>
             <div class="table-wrapper position-r">
-                <table class="table-git position-a">
-                    <caption class="table-git__caption t-g__c1 bg-red">Аннотированные метки:</caption>
+                <table class="table-hide position-a">
+                    <caption class="table-hide__caption t-g__c1 bg-red">Аннотированные метки:</caption>
                 </table>
-                <table class="table-git table-git__full position-a scale">
-                    <caption class="table-git__caption t-g__c2 bg-red">Аннотированные метки:</caption>
+                <table class="table-hide table-hide__full position-a scale">
+                    <caption class="table-hide__caption t-g__c2 bg-red">Аннотированные метки:</caption>
                     <tbody>
                         <tr>
                             <td class="padding-t padding-b">
@@ -357,17 +481,17 @@
                     </tbody>
                 </table>
             </div>
-            <p class="margin_top70"><span class="span-fencing">git tag -a</span> - Создать аннотированный тег</p>
+            <p class="margin-top70"><span class="span-fencing">git tag -a</span> - Создать аннотированный тег</p>
             <p><span class="span-fencing">git tag -m</span> - Указывает сообщение</p>
             <p><span class="span-fencing">git show (v1.4)</span> - Указывает сообщение</p>
-            <p><span class="span-fencing-title">Легкие метки</span></p>
+            <p class="not-text-indent"><span class="span-fencing-title">Легкие метки</span></p>
             <p><span class="span-fencing">git tag &lt;имя тега&gt;</span> - Создать легкий тег</p>
             <div class="table-wrapper position-r">
-                <table class="table-git position-a">
-                    <caption class="table-git__caption t-g__c1 bg-red">Легкие метки:</caption>
+                <table class="table-hide position-a">
+                    <caption class="table-hide__caption t-g__c1 bg-red">Легкие метки:</caption>
                 </table>
-                <table class="table-git table-git__full position-a scale">
-                    <caption class="table-git__caption t-g__c2 bg-red">Легкие метки:</caption>
+                <table class="table-hide table-hide__full position-a scale">
+                    <caption class="table-hide__caption t-g__c2 bg-red">Легкие метки:</caption>
                     <tbody>
                         <tr>
                             <td class="padding-t padding-b">
@@ -391,14 +515,14 @@
                     </tbody>
                 </table>
             </div>
-            <p class="margin_top70"><span class="span-fencing-title">Пометка позже</span></p>
+            <p class="not-text-indent margin-top70"><span class="span-fencing-title">Пометка позже</span></p>
             <p><span class="span-fencing">git tag -a v1.2 9fceb02</span> - Чтобы пометить коммит, можно указываете контрольную сумму коммита (или ее часть) в конце команды</p>
             <div class="table-wrapper position-r">
-                <table class="table-git position-a">
-                    <caption class="table-git__caption t-g__c1 bg-red">Пометка позже</caption>
+                <table class="table-hide position-a">
+                    <caption class="table-hide__caption t-g__c1 bg-red">Пометка позже</caption>
                 </table>
-                <table class="table-git table-git__full position-a scale">
-                    <caption class="table-git__caption t-g__c2 bg-red">Пометка позже</caption>
+                <table class="table-hide table-hide__full position-a scale">
+                    <caption class="table-hide__caption t-g__c2 bg-red">Пометка позже</caption>
                     <tbody>
                         <tr>
                             <td class="padding-t padding-b">
@@ -428,14 +552,14 @@
                     </tbody>
                 </table>
             </div>
-            <p class="margin_top70"><span class="span-fencing-title">Обмен тегами</span></p>
+            <p class="not-text-indent margin-top70"><span class="span-fencing-title">Обмен тегами</span></p>
             <p><span class="span-fencing">git push origin &lt;tagname&gt;</span> - отправлять теги на общий сервер</p>
             <div class="table-wrapper position-r">
-                <table class="table-git position-a">
-                    <caption class="table-git__caption t-g__c1 bg-red">Обмен тегами</caption>
+                <table class="table-hide position-a">
+                    <caption class="table-hide__caption t-g__c1 bg-red">Обмен тегами</caption>
                 </table>
-                <table class="table-git table-git__full position-a scale">
-                    <caption class="table-git__caption t-g__c2 bg-red">Обмен тегами</caption>
+                <table class="table-hide table-hide__full position-a scale">
+                    <caption class="table-hide__caption t-g__c2 bg-red">Обмен тегами</caption>
                     <tbody>
                         <tr>
                             <td class="padding-t padding-b">
@@ -453,13 +577,13 @@
                     </tbody>
                 </table>
             </div>
-            <p class="margin_top70"><span class="span-fencing">--tags</span> - Если есть много тегов</p>
+            <p class="margin-top70"><span class="span-fencing">--tags</span> - Если есть много тегов</p>
             <div class="table-wrapper position-r">
-                <table class="table-git position-a">
-                    <caption class="table-git__caption t-g__c1 bg-red">--tags</caption>
+                <table class="table-hide position-a">
+                    <caption class="table-hide__caption t-g__c1 bg-red"><b>--tags</b></caption>
                 </table>
-                <table class="table-git table-git__full position-a scale">
-                    <caption class="table-git__caption t-g__c2 bg-red">--tags</caption>
+                <table class="table-hide table-hide__full position-a scale">
+                    <caption class="table-hide__caption t-g__c2 bg-red"><b>--tags</b></caption>
                     <tbody>
                         <tr>
                             <td class="padding-t padding-b">
@@ -476,14 +600,14 @@
                     </tbody>
                 </table>
             </div>
-            <p><span class="span-fencing-title margin_top70">Удаление тегов</span></p>
+            <p class="not-text-indent"><span class="span-fencing-title margin-top70">Удаление тегов</span></p>
             <p><span class="span-fencing">git tag -d &lt;tagname&gt;</span> - удалить тег в локальном хранилище</p>
             <div class="table-wrapper position-r">
-                <table class="table-git position-a">
-                    <caption class="table-git__caption t-g__c1 bg-red">локальное удаление тега</caption>
+                <table class="table-hide position-a">
+                    <caption class="table-hide__caption t-g__c1 bg-red">локальное удаление тега</caption>
                 </table>
-                <table class="table-git table-git__full position-a scale">
-                    <caption class="table-git__caption t-g__c2 bg-red">локальное удаление тега</caption>
+                <table class="table-hide table-hide__full position-a scale">
+                    <caption class="table-hide__caption t-g__c2 bg-red">локальное удаление тега</caption>
                     <tbody>
                         <tr>
                             <td class="padding-t padding-b">
@@ -495,13 +619,13 @@
                     </tbody>
                 </table>
             </div>
-            <p class="margin_top70"><span class="span-fencing">git push &lt;remote&gt; :refs/tags/&lt;tagname&gt;</span> - удалить тег с удаленного сервера №1</p>
+            <p class="margin-top70"><span class="span-fencing">git push &lt;remote&gt; :refs/tags/&lt;tagname&gt;</span> - удалить тег с удаленного сервера №1</p>
             <div class="table-wrapper position-r">
-                <table class="table-git position-a">
-                    <caption class="table-git__caption t-g__c1 bg-red">удаление удаленного сервера №1</caption>
+                <table class="table-hide position-a">
+                    <caption class="table-hide__caption t-g__c1 bg-red">удаление удаленного сервера №1</caption>
                 </table>
-                <table class="table-git table-git__full position-a scale">
-                    <caption class="table-git__caption t-g__c2 bg-red">удаление удаленного сервера №1</caption>
+                <table class="table-hide table-hide__full position-a scale">
+                    <caption class="table-hide__caption t-g__c2 bg-red">удаление удаленного сервера №1</caption>
                     <tbody>
                         <tr>
                             <td class="padding-t padding-b">
@@ -514,15 +638,15 @@
                     </tbody>
                 </table>
             </div>
-            <p class="margin_top70"><span class="span-fencing">git push &lt;remote&gt; :refs/tags/&lt;tagname&gt;</span> - удалить тег с удаленного сервера №2</p>
+            <p class="margin-top70"><span class="span-fencing">git push &lt;remote&gt; :refs/tags/&lt;tagname&gt;</span> - удалить тег с удаленного сервера №2</p>
             <span class="hr-line"></span>
-            <p><span class="span-fencing-title">псевдонимы</span></p>
+            <p class="not-text-indent"><span class="span-fencing-title">псевдонимы</span></p>
             <div class="table-wrapper position-r">
-                <table class="table-git position-a">
-                    <caption class="table-git__caption t-g__c1 bg-red">git config</caption>
+                <table class="table-hide position-a">
+                    <caption class="table-hide__caption t-g__c1 bg-red"><b>git config</b></caption>
                 </table>
-                <table class="table-git table-git__full position-a scale">
-                    <caption class="table-git__caption t-g__c2 bg-red">git config</caption>
+                <table class="table-hide table-hide__full position-a scale">
+                    <caption class="table-hide__caption t-g__c2 bg-red"><b>git config</b></caption>
                     <tbody>
                         <tr>
                             <td class="padding-t padding-b">
@@ -558,7 +682,7 @@
             <p><span class="span-fencing">Ctrl + (Mouse wheel)</span> — переключение масштаба (<b>“editor.mouseWheelZoom”: true,</b> - чтобы работал зум на колесико мыши).</p>
             <p><span class="span-fencing">Ctrl + K, Z</span> — Zen mode.</p>
             <span class="hr-line"></span>
-            <p><span class="span-fencing-title">Сворачивание групп</span></p>
+            <p class="not-text-indent"><span class="span-fencing-title">Сворачивание групп</span></p>
             <p><span class="span-fencing">Ctrl + K Ctrl + 0</span> — Fold All - сворачивание всех раскрываемых блоков.</p>
             <p><span class="span-fencing">Ctrl + K Ctrl + J</span> — Unfold All - раскрытие всех раскрываемых блоков.</p>
             <span class="hr-line"></span>
@@ -575,7 +699,7 @@
             <p><span class="span-fencing">Alt + Arrow</span> — перемещение строки.</p>
             <p><span class="span-fencing">Shift + Alt + Arrow</span> — копирование строки.</p>
             <span class="hr-line"></span>
-            <p><span class="span-fencing-title">Коментарии</span></p>
+            <p class="not-text-indent"><span class="span-fencing-title">Коментарии</span></p>
             <p><span class="span-fencing">Ctrl + /</span> — вставка строчного комментария.</p>
             <p><span class="span-fencing">Shift + Alt + A</span> — вставка блочного комментария.</p>
             <p><span class="span-fencing">.inner|c</span> — комментарий с закрывающим тегом</p>
@@ -646,7 +770,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
         $(function () {
-            $('.table-git__caption').click(function () {
+            $('.table-hide__caption').click(function () {
                 $(this).parent().toggleClass("scale");
                 $(this).parent().siblings().toggleClass('scale');
             });

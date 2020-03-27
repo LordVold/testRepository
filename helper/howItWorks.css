@@ -120,9 +120,12 @@ button {
 /* ~~~ DEFAULT CLASSES START ~~~ */
 .container {
     background-color: #fff;
-    padding: 50px 0 50px 60px;
+    padding: 50px 40px 50px 60px;
 }
 
+.bg-yellow {
+    background-color: rgba(255, 255, 0, 0.3);
+}
 .bg-red {
     background-color: rgba(255, 0, 0, 0.3);
 }
@@ -147,26 +150,25 @@ button {
     position: absolute;
 }
 
-.margin_top70 {
+.margin-top70 {
     margin-top: 70px;
 }
 
+.margin-top130 {
+    margin-top: 130px;
+}
 .text-align-l {
     text-align: left;
 }
 
 .span-fencing {
-    width: 250px;
-    display: inline-block;
-    border-right: 2px solid rgb(238, 94, 94);
+    width: 160px;
     margin-right: 10px;
     font-weight: bold;
 }
 
 .span-fencing-title {
-    display: inline-block;
     border-left: 2px solid rgb(238, 94, 94);
-    border-right: 2px solid rgb(238, 94, 94);
     padding: 5px 30px 4px;
     font-weight: bold;
     text-transform: uppercase;
@@ -175,6 +177,11 @@ button {
     margin-bottom: 10px;
 }
 
+.span-fencing,
+.span-fencing-title {
+    display: inline-block;
+    border-right: 2px solid rgb(238, 94, 94);
+}
 /* ~~~ DEFAULT CLASSES END ~~~ */
 /* ============================================================== */
 /* ~~~ DEFAULT COMPONENT START ~~~ */
@@ -203,7 +210,7 @@ button {
 }
 
 /* table pretty=format start */
-.table-git {
+.table-hide {
     margin-left: 25px;
     background-color: rgb(238, 94, 94);
     top: 0;
@@ -215,13 +222,13 @@ button {
     transition: all 0.5s ease 0s;
 }
 
-.table-git__full {
+.table-hide__full {
     z-index: 1;
     width: 900px;
     max-width: 80%;
 }
 
-.table-git caption {
+.table-hide caption {
     padding: 13px 35px 15px;
     text-align: right;
     cursor: pointer;
@@ -235,26 +242,26 @@ button {
     border-radius: 7px 7px 0 0;
 }
 
-.table-git th {
+.table-hide th {
     padding: 25px 0 15px 10px;
 }
 
-.table-git th {
+.table-hide th {
     border-bottom: 2px solid rgba(0, 0, 0, 0.3);
 }
 
-.table-git td:first-child {
+.table-hide td:first-child {
     text-align: center;
     font-weight: bold;
     width: 20%;
 }
 
-.table-git td {
+.table-hide td {
     padding: 8px 10px;
     line-height: 1.6;
 }
 
-.table-git td:last-child {
+.table-hide td:last-child {
     padding-left: 40px;
 }
 
@@ -266,8 +273,13 @@ td.padding-b {
     padding-bottom: 25px;
 }
 
+.table-hide td.text-align-l {
+    text-align: left;
+    padding-left: 70px;
+}
+
 /* toggle */
-.table-git.scale {
+.table-hide.scale {
     transform: scaleY(0);
     transition: all 0.4s ease 0s;
 }
@@ -282,15 +294,24 @@ h2 {
     padding: 15px;
 }
 
-p {
-    margin-bottom: 10px;
-    line-height: 1.6;
-}
-
 .h2-wrapper {
     margin-left: 30px;
     width: 60%;
     border-radius: 6px;
 }
+
+p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    padding-left: 350px;
+    text-indent: -180px;
+}
+
+p.not-text-indent {
+    padding-left: 0;
+    text-indent: 0;
+}
+
+
 
 /* ~~~ CASTOM STYLE END ~~~ */
