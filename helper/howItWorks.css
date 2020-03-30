@@ -126,6 +126,7 @@ button {
 .bg-yellow {
     background-color: rgba(255, 255, 0, 0.3);
 }
+
 .bg-red {
     background-color: rgba(255, 0, 0, 0.3);
 }
@@ -157,12 +158,13 @@ button {
 .margin-top130 {
     margin-top: 130px;
 }
+
 .text-align-l {
     text-align: left;
 }
 
 .span-fencing {
-    width: 160px;
+    width: 250px;
     margin-right: 10px;
     font-weight: bold;
 }
@@ -172,7 +174,7 @@ button {
     padding: 5px 30px 4px;
     font-weight: bold;
     text-transform: uppercase;
-    border-radius: 20px;
+    border-radius: 8px;
     background-color: rgba(256, 256, 0, 0.3);
     margin-bottom: 10px;
 }
@@ -182,50 +184,55 @@ button {
     display: inline-block;
     border-right: 2px solid rgb(238, 94, 94);
 }
+
+.padding-b25 {
+    padding-bottom: 25px;
+}
+
+.padding-b-25 {
+    padding-bottom: -25px;
+}
+
 /* ~~~ DEFAULT CLASSES END ~~~ */
 /* ============================================================== */
 /* ~~~ DEFAULT COMPONENT START ~~~ */
-.hr-line {
+
+.hr {
     content: "";
     display: inline-block;
     vertical-align: middle;
     width: 700px;
     max-width: 80%;
     height: 3px;
-    background: yellow;
     margin-left: 3%;
     margin-bottom: 15px;
 }
 
-.hr-line-short {
-    content: "";
-    display: inline-block;
-    vertical-align: middle;
-    width: 200px;
-    max-width: 40%;
-    height: 2px;
-    background: rgb(115, 214, 115);
-    margin-left: 1%;
-    margin-bottom: 10px;
+.hr_red {
+    background: red;
 }
 
-/* table pretty=format start */
+.hr_yellow {
+    background: yellow;
+}
+
+/* table-hide start */
 .table-hide {
     margin-left: 25px;
-    background-color: rgb(238, 94, 94);
+    background-color: rgb(255, 255, 0);
     top: 0;
     left: 0;
+    border-bottom: 1px solid rgba(255, 0, 0, 0.9);
     border-radius: 0 0 7px 7px;
     width: 900px;
     max-width: 80%;
     transform: scaleY(1);
     transition: all 0.5s ease 0s;
+
 }
 
 .table-hide__full {
     z-index: 1;
-    width: 900px;
-    max-width: 80%;
 }
 
 .table-hide caption {
@@ -234,48 +241,44 @@ button {
     cursor: pointer;
 }
 
-.t-g__c1 {
+.table-hide__caption1 {
     border-radius: 7px;
+    background-color: rgba(255, 0, 0, 0.6);
 }
 
-.t-g__c2 {
+.table-hide__caption2 {
     border-radius: 7px 7px 0 0;
+    background-color: rgba(255, 0, 0, 0.9);
 }
 
 .table-hide th {
     padding: 25px 0 15px 10px;
-}
-
-.table-hide th {
     border-bottom: 2px solid rgba(0, 0, 0, 0.3);
 }
 
-.table-hide td:first-child {
-    text-align: center;
-    font-weight: bold;
-    width: 20%;
-}
-
 .table-hide td {
-    padding: 8px 10px;
     line-height: 1.6;
+    padding: 25px 50px;
 }
 
-.table-hide td:last-child {
-    padding-left: 40px;
+.table-hide pre {
+    margin: 0;
 }
 
-td.padding-t {
-    padding-top: 25px;
+.border-r {
+    border-right: 2px solid rgba(255, 0, 0, 0.9);
 }
 
-td.padding-b {
-    padding-bottom: 25px;
+.table-hide td.vertical-align-t {
+    vertical-align: top;
 }
 
-.table-hide td.text-align-l {
-    text-align: left;
-    padding-left: 70px;
+.tbody__dual td:first-child {
+    width: 270px;
+}
+
+.tbody__dual td:last-child {
+    padding-left: 0;
 }
 
 /* toggle */
@@ -285,33 +288,84 @@ td.padding-b {
 }
 
 /* toggle */
-/* table pretty=format end */
+/* table-hide end */
+/* div-table__wrapper start */
+.div-table__wrapper {
+    width: 90%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.div-table__body.scale {
+    transform: scaleY(0);
+    transition: all 0.4s ease 0s;
+}
+
+.div-table__caption {
+    padding: 13px 35px 15px;
+    text-align: right;
+    cursor: pointer;
+    background-color: red;
+        border-radius: 6px;
+}
+
+.div-table__body {
+    border-radius: 0 0 7px 7px;
+    background-color: red;
+    transform: scaleY(1);
+    transition: all 0.5s ease 0s;
+}
+
+.div-table__fencing,
+.div-table__fencing2 {
+    line-height: 1.5;
+}
+
+.div-table__fencing {
+    width: 30%;
+    border-right: 1px solid black;
+    padding: 20px 20px 0 20px;
+    text-align: right;
+}
+
+.div-table__fencing2 {
+    width: 70%;
+    padding: 20px 20px 0 20px;
+}
+
+.div-table__fencing-title {
+    padding: 8px 0 7px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 30%;
+    background-color: black;
+    color: red;
+}
+
+/* div-table__wrapper end */
 /* ~~~ DEFAULT COMPONENT END ~~~ */
 /* ============================================================== */
 /* ~~~ CASTOM STYLE START ~~~ */
 h2 {
     margin-bottom: 40px;
     padding: 15px;
+    border-radius: 8px;
 }
 
 .h2-wrapper {
     margin-left: 30px;
     width: 60%;
-    border-radius: 6px;
 }
 
 p {
     margin-bottom: 10px;
     line-height: 1.6;
-    padding-left: 350px;
-    text-indent: -180px;
 }
 
 p.not-text-indent {
     padding-left: 0;
     text-indent: 0;
 }
-
-
 
 /* ~~~ CASTOM STYLE END ~~~ */
