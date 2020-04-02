@@ -19,9 +19,10 @@
       <div class="h2-wrapper">
         <h2 class="bg-red">JS</h2>
       </div>
-      <p class="not-text-indent"><span class="span-fencing-title">string</span></p>
-      <p><span class="span-fencing"><a href="https://developer.mozilla.org/uk/docs/Web/JavaScript/Reference/Operators/Operator_Precedence/#Table" target="_blank">link to MDN</a></span> - Operator
+      <p><span class="span-fencing"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#Table" target="_blank">link to MDN</a></span> - Operator
         precedence</p>
+      <p><span class="span-fencing"><a href="http://java-script2017.blogspot.com/2017/05/js-1-hello-world.html" target="_blank">SORAX</a></span> - Sorax__blog</p>
+      <p class="not-text-indent"><span class="span-fencing-title">string</span></p>
       <p><span class="span-fencing">string.length</span> - длина строки -> string.length - 1</p>
       <p><span class="span-fencing">string.chartAt(n)</span> - возвращает указанный символ из строки (n - целое число от 0 до длины строки минус 1)</p>
       <p><span class="span-fencing">string.string[n]</span> - возвращает указанный символ из строки (n - целое число от 0 до длины строки минус 1)</p>
@@ -37,6 +38,7 @@
       <p><span class="span-fencing">typeof()</span> - узнать тип</p>
       <p><span class="span-fencing">isFinite()</span> - является ли число конечным</p>
       <p><span class="span-fencing">isNaN()</span></p>
+      <p><span class="span-fencing">split(' ').join('')</span></p>
       <span class="hr hr_red"></span>
       <p class="not-text-indent"><span class="span-fencing-title">boolean</span></p>
       <p><span class="span-fencing">boolean(n)</span> - true or false</p>
@@ -153,6 +155,225 @@ false || true
       <p><span class="span-fencing">.toString()</span> - преобразование в строку</p>
       <p><span class="span-fencing">Boolean(n)</span> - перевести в boolean</p>
       <p><span class="span-fencing">!!n</span> - преобразование в boolean</p>
+      <p><span class="span-fencing">n.toFixed(2)</span> - округляет число n до 2 знаков после запятой.</p>
+      <span class="hr hr_red"></span>
+      <p class="not-text-indent"><span class="span-fencing-title">Методы массивов</span></p>
+      <p><span class="span-fencing">Добавление/удаление элементов</span></p>
+      <p><span class="span-fencing">arr.push(...items)</span> – добавляет элементы в конец</p>
+      <p><span class="span-fencing">arr.pop()</span> – извлекает элемент из конца</p>
+      <p><span class="span-fencing">arr.shift()</span> – извлекает элемент из начала</p>
+      <p><span class="span-fencing">arr.unshift(...items)</span> – добавляет элементы в начало</p>
+      <div class="splice position-r">
+        <div class="div-table__wrapper position-a">
+          <div data-target="toggle" class="div-table__caption">
+            <b>splice</b>
+          </div>
+          <div class="div-table__body">
+            <div class="div-table__fencing70">
+              <pre>
+    синтаксис:
+
+    arr.splice(index[, deleteCount, elem1, ..., elemN])</pre>
+            </div>
+            <hr />
+            <div class="d-flex">
+              <div class="div-table__fencing65">
+                <pre class="text-align-l">
+    let arr = ["Я", "изучаю", "JavaScript"];
+
+    arr.splice(1, 1);
+
+    alert( arr ); // осталось ["Я", "JavaScript"]</pre>
+              </div>
+              <div class="div-table__fencing35">
+                Начиная с позиции 1, он убрал 1 элемент.
+              </div>
+            </div>
+            <hr />
+            <div class="d-flex">
+              <div class="div-table__fencing65">
+                <pre class="text-align-l">
+    let arr = ["Я", "изучаю", "JavaScript", "прямо", "сейчас"];
+
+    // удалить 3 первых элемента и заменить их другими
+    arr.splice(0, 3, "Давай", "танцевать");
+
+    alert( arr ) // теперь ["Давай", "танцевать", "прямо", "сейчас"]</pre>
+              </div>
+              <div class="div-table__fencing35">
+                Удалить 3 элемента и заменить их двумя другими.
+              </div>
+            </div>
+            <hr />
+            <div class="d-flex">
+              <div class="div-table__fencing65">
+                <pre class="text-align-l">
+    let arr = ["Я", "изучаю", "JavaScript", "прямо", "сейчас"];
+
+    // удалить 2 первых элемента
+    let removed = arr.splice(0, 2);
+
+    alert( removed ); // "Я", "изучаю" <-- массив из удалённых элементов</pre>
+              </div>
+              <div class="div-table__fencing35">
+                splice возвращает массив из удалённых элементов.
+              </div>
+            </div>
+            <hr />
+            <div class="d-flex">
+              <div class="div-table__fencing65">
+                <pre class="text-align-l">
+    let arr = ["Я", "изучаю", "JavaScript"];
+
+    // с позиции 2
+    // удалить 0 элементов
+    // вставить "сложный", "язык"
+    arr.splice(2, 0, "сложный", "язык");
+
+    alert( arr ); // "Я", "изучаю", "сложный", "язык", "JavaScript"</pre>
+              </div>
+              <div class="div-table__fencing35">
+                Вставлять элементы без удаления, для этого достаточно установить deleteCount в 0.
+              </div>
+            </div>
+            <hr />
+            <div class="d-flex">
+              <div class="div-table__fencing65">
+                <pre class="text-align-l">
+    let arr = [1, 2, 5];
+
+    // начиная с индекса -1 (перед последним элементом)
+    // удалить 0 элементов,
+    // затем вставить числа 3 и 4
+    arr.splice(-1, 0, 3, 4);
+
+    alert( arr ); // 1,2,3,4,5</pre>
+              </div>
+              <div class="div-table__fencing35">
+                Отрицательный индекс позволяет начать отсчёт элементов с конца
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slice position-r margin-top70">
+        <div class="div-table__wrapper position-a">
+          <div data-target="toggle" class="div-table__caption">
+            <b>slice</b>
+          </div>
+          <div class="div-table__body">
+            <div class="div-table__fencing70">
+              <pre>
+    синтаксис:
+
+    arr.slice([start], [end])</pre>
+            </div>
+            <hr />
+            <div class="div-table__fencing">
+              Он возвращает новый массив, в который копирует элементы, начиная с индекса start и до end (не включая end).
+              Оба индекса start и end могут быть отрицательными. В таком случае отсчёт
+              будет осуществляться с конца массива.<br />
+
+              Это похоже на строковый метод str.slice, но вместо подстрок возвращает подмассивы.
+              <pre class="text-align-l">
+    let arr = ["t", "e", "s", "t"];
+
+    alert( arr.slice(1, 3) ); // e,s (копирует с 1 до 3)
+
+    alert( arr.slice(-2) ); // s,t (копирует с -2 до конца)</pre>
+              <div class="div-mark">Можно вызвать slice и вообще без аргументов: <span class="span-invert">arr.slice()</span> создаёт копию массива arr.
+                Это часто используют, чтобы создать копию массива для дальнейших преобразований,
+                которые не должны менять исходный массив.</div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="contact position-r margin-top130">
+        <div class="div-table__wrapper position-a">
+          <div data-target="toggle" class="div-table__caption">
+            <b>contact</b>
+          </div>
+          <div class="div-table__body">
+            <div class="div-table__fencing">
+              <pre>
+    синтаксис:
+
+    arr.concat(arg1, arg2...)</pre>
+              Он принимает любое количество аргументов, которые могут быть как массивами, так и простыми значениями.<br />
+              В результате мы получаем новый массив, включающий в себя элементы из arr, а также arg1, arg2 и так далее…<br />
+              Если аргумент argN – массив, то все его элементы копируются. Иначе скопируется сам аргумент.
+              <pre>
+    let arr = [1, 2];
+
+    // создать массив из: arr и [3,4]
+    alert( arr.concat([3, 4]) ); // 1,2,3,4
+
+    // создать массив из: arr и [3,4] и [5,6]
+    alert( arr.concat([3, 4], [5, 6]) ); // 1,2,3,4,5,6
+
+    // создать массив из: arr и [3,4], потом добавить значения 5 и 6
+    alert( arr.concat([3, 4], 5, 6) ); // 1,2,3,4,5,6</pre>
+              Обычно он просто копирует элементы из массивов.
+              Другие объекты, даже если они выглядят как массивы, добавляются как есть:
+              <pre>
+    let arr = [1, 2];
+
+    let arrayLike = {
+    0: "что-то",
+    length: 1
+    };
+
+    alert( arr.concat(arrayLike) ); // 1,2,[object Object]</pre>
+              …Но если объект имеет специальное свойство <span class="span-invert">Symbol.isConcatSpreadable</span>,
+              то он обрабатывается concat как массив: вместо него добавляются его числовые свойства.<br />
+              Для корректной обработки в объекте должны быть числовые свойства и length:
+              <pre>
+    let arr = [1, 2];
+
+    let arrayLike = {
+    0: "что-то",
+    1: "ещё",
+    [Symbol.isConcatSpreadable]: true,
+    length: 2
+    };
+
+    alert( arr.concat(arrayLike) ); // 1,2,что-то,ещё</pre>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="forEach position-r margin-top190">
+        <div class="div-table__wrapper position-a">
+          <div data-target="toggle" class="div-table__caption">
+            <b>forEach</b>
+          </div>
+          <div class="div-table__body">
+            <div class="div-table__fencing">
+              <pre>
+    синтаксис:
+
+    arr.forEach(function(item, index, array) {
+      // ... делать что-то с item
+    });</pre>
+              Метод arr.forEach позволяет запускать функцию для каждого элемента массива.
+              <hr />
+              Например, этот код выведет на экран каждый элемент массива:
+              <pre>
+    // Вызов alert для каждого элемента
+    ["Bilbo", "Gandalf", "Nazgul"].forEach(alert);</pre>
+              А этот вдобавок расскажет и о своей позиции в массиве:
+              <pre>
+    ["Bilbo", "Gandalf", "Nazgul"].forEach((item, index, array) => {
+      alert(`${item} имеет позицию ${index} в ${array}`);
+    });</pre>
+              Результат функции (если она вообще что-то возвращает) отбрасывается и игнорируется.
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="not-text-indent margin-top250"><span class="span-fencing-title">Поиск в массиве</span></p>
+      <p><span class="span-fencing">slice</span></p>
       <span class="hr hr_red"></span>
       <p class="not-text-indent"><span class="span-fencing-title">Условные инструкции</span></p>
       <div class="if table-wrapper position-r">
@@ -301,54 +522,135 @@ do  i++; while (i < 10)</pre>
       </div>
       <span class="hr hr_red margin-top70"></span>
       <p class="not-text-indent"><span class="span-fencing-title">Функции</span></p>
-      <div class="function table-wrapper position-r">
-        <table class="table-hide position-a">
-          <caption class="table-hide__caption table-hide__caption1"> <b>function</b></caption>
-        </table>
-        <table class="table-hide table-hide__full position-a scale">
-          <caption class="table-hide__caption table-hide__caption2"> <b>function</b></caption>
-          <tbody>
-            <tr>
-              <td>
-                <pre>
-function идентификатор(аргумент) {
-  arguments[2];
-  инструкция
-  return выражение
-}
-
-выражение(аргументы)
-<hr size="3px" noshade color="yellow" width="100px" align="left"/>
-let variable = function(name) {
-  return "Some text " + name;
-}; -> Анонимная функция
-<hr size="3px" noshade color="yellow" width="100px" align="left"/>
-let variable = function(callback) {
-  let name = "BMW";
-  callback(name);
-};
-
-variable (function(n)) {
-    n + " is good car"; // BMW is good car
-});
-<hr size="3px" noshade color="yellow" width="100px" align="left"/>
-let variable = function() {
-    return function() {
-        insructions
+      <div class="function position-r">
+        <div class="div-table__wrapper position-a">
+          <div class="div-table__caption">
+            <b>function</b>
+          </div>
+          <div class="div-table__body scale">
+            <div class="div-table__fencing70">
+              <pre>
+    function идентификатор(аргумент) {
+    arguments[2];
+    инструкция
+    return выражение
     }
-};
 
-variable()();
-<hr size="3px" noshade color="yellow" width="100px" align="left"/>
-let variable = (function(name) {
+    выражение(аргументы)
+    <hr />
+    let variable = function(name) {
+    return "Some text " + name;
+    }; -> Анонимная функция
+    <hr />
+    let variable = function(callback) {
+    let name = "BMW";
+    callback(name);
+    };
+
+    variable (function(n)) {
+    n + " is good car"; // BMW is good car
+    });
+    <hr />
+    let variable = function() {
+    return function() {
+    insructions
+    }
+    };
+
+    variable()();
+    <hr />
+    let variable = (function(name) {
     return "Hello " + name;
-}("world"));
+    }("world"));
 
-console.log(variable); // Hello world</pre>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+    console.log(variable); // Hello world
+     <hr /></pre>
+
+            </div>
+            <div class="d-flex">
+              <div class="div-table__fencing45">
+                <pre class="text-align-l">
+        sayHi("Вася"); // Привет, Вася
+
+        function sayHi(name) {
+          alert( `Привет, ${name}` );
+        }</pre>
+              </div>
+              <div class="div-table__fencing55">
+                - Function Declaration (Function Declaration доступно
+                во всём блоке кода, в котором объявлено)
+              </div>
+            </div>
+            <div class="d-flex">
+              <div class="div-table__fencing45">
+                <pre class="text-align-l">
+        sayHi("Вася"); // ошибка!
+
+        let sayHi = function(name) {
+          alert( `Привет, ${name}` );
+        };</pre>
+              </div>
+              <div class="div-table__fencing55">
+                - Function Expression
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="arrow-function position-r margin-top70">
+        <div class="div-table__wrapper position-a">
+          <div class="div-table__caption">
+            <b>=></b>
+          </div>
+          <div class="div-table__body scale">
+            <div class="d-flex">
+              <div class="div-table__fencing45">
+                <pre class="text-align-l">
+        let func = (arg1, arg2, ...argN) => expression</pre>
+              </div>
+              <div class="div-table__fencing55">
+                - Arrow Function
+              </div>
+            </div>
+            <div class="d-flex">
+              <div class="div-table__fencing45">
+                <pre class="text-align-l">
+        let func = function(arg1, arg2, ...argN) {
+          return expression;
+        };</pre>
+              </div>
+              <div class="div-table__fencing55">
+                - Function Expression
+              </div>
+            </div>
+            <div class="div-table__fencing70">
+              <pre>
+    <hr />
+    <b>Многострочные стрелочные функции</b>
+
+    let sum = (a, b) => { // фигурная скобка, открывающая тело многострочной функции
+      let result = a + b;
+      return result; // при фигурных скобках для возврата значения нужно явно вызвать return
+    };
+
+    alert( sum(1, 2) ); // 3
+    <hr /></pre>
+            </div>
+            <div class="d-flex">
+              <div class="div-table__fencing45">
+                <pre class="text-align-l">
+        sayHi("Вася"); // ошибка!
+
+        let sayHi = function(name) {
+          alert( `Привет, ${name}` );
+        };</pre>
+              </div>
+              <div class="div-table__fencing55">
+                - Function Expression
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <p class="not-text-indent margin-top70"><span class="span-fencing-title">Цепочка областей видимости</span></p>
       <div class="scope-chain table-wrapper position-r">
@@ -427,6 +729,373 @@ console.log(counter()); // 501</pre>
         </table>
       </div>
       <span class="hr hr_red margin-top70"></span>
+      <p class="not-text-indent"><span class="span-fencing-title">throw</span></p>
+      <div class="throw position-r">
+        <div class="div-table__wrapper position-a">
+          <div class="div-table__caption">
+            <b>throw</b>
+          </div>
+          <div class="div-table__body scale">
+            <div class="div-table__fencing70 padding-b25">
+              <pre>
+    let myError = new Error("My Error Message");
+    console.log(myError.name); // Error
+    console.log(myError.message); // My Error Message</pre>
+            </div>
+          </div>
+        </div>
+      </div>
+      <span class="hr hr_red margin-top70"></span>
+      <p class="not-text-indent"><span class="span-fencing-title">objects</span></p>
+      <div class="objects position-r">
+        <div class="div-table__wrapper position-a">
+          <div class="div-table__caption">
+            <b>objects</b>
+          </div>
+          <div class="div-table__body scale">
+            <div class="div-table__fencing70">
+              <pre>
+    let person = {
+      name: "Sorax",
+      age: 20,
+      gender: "male",
+      sayHi: function() {
+        return "Hello!";
+      }
+    }</pre>
+            </div>
+            <div class="div-table__fencing70">
+              <pre>
+    Выражение обращения имеет два синтаксиса:
+    <hr />
+    выражение.идентификатор
+    выражение['выражение']</pre>
+            </div>
+            <div class="d-flex">
+              <div class="div-table__fencing30">
+                person.age = 25;
+              </div>
+              <div class="div-table__fencing70">
+                - Изменение свойства
+              </div>
+            </div>
+            <div class="d-flex">
+              <div class="div-table__fencing30">
+                person.userID = 222335;
+              </div>
+              <div class="div-table__fencing70">
+                - Добавление свойства
+              </div>
+            </div>
+            <div class="d-flex">
+              <div class="div-table__fencing30">
+                delete object.age;
+              </div>
+              <div class="div-table__fencing70">
+                - Удаление свойства (только родные, ненаследованные свойства)
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <span class="hr hr_red margin-top70"></span>
+      <p class="not-text-indent"><span class="span-fencing-title">this</span></p>
+      <div class="position-r">
+        <div class="div-table__wrapper position-a">
+          <div data-target="toggle" class="div-table__caption">
+            <b>this</b>
+          </div>
+          <div class="div-table__body scale">
+            <div class="div-table__fencing70">
+              <pre>
+   let greet = function() {
+   return "Hi! My name is " + this.name;
+   }
+
+   let person = {
+   name: "John",
+   greet: greet
+   };
+
+   let anotherPerson = {
+   name: "Bob",
+   greet: greet
+   };
+
+   console.log(person.greet()); // Hi! My name is John
+   console.log(anotherPerson.greet()); // Hi! My name is Bob</pre>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="position-r margin-top70">
+        <div class="div-table__wrapper position-a">
+          <div data-target="toggle" class="div-table__caption">
+            <b>call, apply, bind</b>
+          </div>
+          <div class="div-table__body scale">
+            <div class="div-table__fencing70">
+              <pre>
+    let greet = function(greeting) {
+    return greeting + "! My name is " + this.name;
+    }
+
+    let person = {
+    name: "John",
+    greet: greet
+    };
+
+    let anotherPerson = {
+    name: "Bob",
+    greet: greet
+    };
+    <hr />
+    <b>call</b>
+    console.log(person.greet("Hi")); // Hi! My name is John
+    console.log(anotherPerson.greet.call(person, "Bonjour")); // Bonjour! My name is John
+    <hr />
+    <b>apply</b>
+    console.log(anotherPerson.greet.apply(person, ["Bonjour"])); // Bonjour! My name is John
+        ->    В apply аргументы передаются массивом, а не через запятую
+    <hr />
+    <b>bind</b>
+    var bound = greet.bind(anotherPerson);
+    console.log(bound("Hello there")); // Hello there! My name is Bob
+       ->   Метод bind не вызывает функцию, а связывает ее с каким-либо объектом.
+       ->   Чтобы когда мы ее вызвали ключевое слово this указывало на тот объект,
+       с которым оно было связано.
+       ->   Метод bind не изменяет исходную функцию, а возвращает новую функцию.</pre>
+            </div>
+          </div>
+        </div>
+      </div>
+      <span class="hr hr_red margin-top70"></span>
+      <p class="not-text-indent"><span class="span-fencing-title">get & set</span></p>
+      <div class="position-r">
+        <div class="div-table__wrapper position-a">
+          <div data-target="toggle" class="div-table__caption">
+            <b>get & set</b>
+          </div>
+          <div class="div-table__body scale">
+            <div class="div-table__fencing70">
+              <pre>
+    var person = {
+      name: "Sorax",
+      _age: 20,
+      get age(){
+        return this._age;
+      },
+      set age(value){
+        this._age = value < 0 ? 0 : value> 122 ? 122 : value;
+      }
+    };
+    // Посмотрим как будет работать сеттер
+    person.age = 180;
+    console.log(person.age); // 122
+    person.age = -80;
+    console.log(person.age); // 0
+    person.age = 34;
+    console.log(person.age); // 34
+              <hr />
+    Обычные свойства имеют имя и значение.
+    Кроме этого каждое свойство имеет также атрибуты: writable, enumerable, configurable
+    Эти 3 атрибута можно изменять при помощи объекта,
+          который называется дескриптором свойства - getOwnPropertyDescriptor
+
+    <b>writable</b> – значение свойства можно менять, если true.
+          По умолчанию false.
+    <b>configurable</b> – если true, то свойство можно удалять,
+    а также менять его в дальнейшем при помощи новых вызовов defineProperty.
+          По умолчанию false.
+    <b>enumerable</b> – если true, то свойство просматривается в цикле for..in и методе Object.keys().
+          По умолчанию false.</pre>
+            </div>
+          </div>
+        </div>
+      </div>
+      <span class="hr hr_red margin-top70"></span>
+      <p class="not-text-indent"><span class="span-fencing-title">Прототипы и наследование</span></p>
+      <div class="position-r">
+        <div class="div-table__wrapper position-a">
+          <div data-target="toggle" class="div-table__caption">
+            <b>prototype</b>
+          </div>
+          <div class="div-table__body scale">
+            <div class="div-table__fencing70">
+              <pre>
+    В переменных объектов мы храним не значения, а ссылки.
+    var a = {x: 10}, b = {x: 20};
+    a = b;
+    b.x = 15;
+    console.log(a.x); // 15
+    a.x = 45;
+    console.log(b.x); // 45
+              <hr />
+    Любой объект в JS имеет связанный с ним объект, который называется его прототипом.
+    Объект наследует все свойства прототипа и доступен через наш дочерний объект.
+    Это называется наследование, основанное на прототипах.
+          Это единственный тип наследования, который есть в JS.
+              <hr />
+    var ObjectProto = {
+      name: "Sorax"
+    };
+
+    Мы имеем доступ ко всем свойствам объекта
+    var object = Object.create(ObjectProto);
+      console.log(object.name); // Sorax
+
+    Это нужно, если мы создаем много однотипных объектов, когда нужно прописывать одни и те же свойства.
+
+    var Person = {
+      constructor: function(name, age, gender) {
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+        return this;
+      },
+      greet: function() {
+        console.log("Hi, my name is " + this.name);
+      }
+    }
+
+    var person, anotherPerson, thirdPerson;
+
+    person = Object.create(Person).constructor("John", 35, "male");
+    anotherPerson = Object.create(Person).constructor("Jessica", 28, "female");
+    thirdPerson = Object.create(Person).constructor("Bruce", 38, "male");
+              <hr />
+    Для того, чтобы определить является ли объект прототипом другого объекта
+          етсь метод <b>isPrototypeOf</b>
+    console.log(Person.isPrototypeOf(person)); // true
+              <hr />
+    Добавим новое свойство в конструктор
+    WebDeveloper.constructor = function(name, age, gender, skills) {
+      Person.constructor.apply(this, arguments);
+      this.skills = skills || [];
+      return this;
+    };
+
+    WebDeveloper.develop = function(){
+      console.log("Working...");
+    };
+
+    var developer = Object.create(WebDeveloper).constructor("Jack", 21, "male",
+          ["html", "css", "js", "php", "mysql"]);
+    console.log(developer.skills); // Array [ "html", "css", "js", "php", "mysql" ]
+
+    developer.develop(); // Working...
+
+    console.log(developer.name); // Jack
+    developer.greet(); // Hi, my name is Jack</pre>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="not-text-indent"><span class="span-fencing-title">Конструкторы и классы</span></p>
+      <div class="position-r">
+        <div class="div-table__wrapper position-a">
+          <div data-target="toggle" class="div-table__caption">
+            <b>constructor</b>
+          </div>
+          <div class="div-table__body scale">
+            <div class="div-table__fencing70">
+              <pre>
+    var Person, person, anotherPerson, Developer, developer;
+
+    Здесь конструктор принимает имя и присваевает его соотвствующему свойству объекта
+    Person = function(name) {
+      this.name = name; // this указывает на новый создаваемый объект
+    };
+
+  Person.prototype.greet = function() {
+    console.log("Hello, my name is " + this.name);
+  };
+
+  Конструкторы не отличаются от обычных функций ничем.
+  Любую функцию можно вызвать с ключевым словом new.
+  Чтобы оличить конструкторы от обычных функций их называют с большой буквы.
+
+  person = new Person("Jack"); // получам новый объект
+  console.log(person.name); // Jack
+  person.greet(); // Hello, my name is Jack
+
+  anotherPerson = new Person("Bruce"); // получаем новый объект
+  console.log(anotherPerson.name); // Bruce
+  anotherPerson.greet(); // Hello, my name is Bruce
+
+  Каждая функция в JS потенциально является конструктором и также имеет свойство prototype.
+  Изначально это пустой объект, но мы можем вешать на него любые свойства и методы и
+        они будут доступны всем экземплярам класса.
+  console.log(Person.prototype); // Object { greet: Person.prototype.greet(), ещё 1… }
+              <hr />
+    При помощи instanceof мы можем проверить принадлежность любого объекта к классу.
+    console.log(anotherPerson instanceof Person); // true
+    console.log(Person.prototype.isPrototypeOf(anotherPerson)); // аналогичная проверка
+
+    prototype хранит прототип, от которого будут наследовать свойтва все объекты,
+    которые буду сздаваться этой функцией при поомщи ключевого слова new
+              <hr />
+    // СОЗДАНИЕ ДОЧЕРНИХ КЛАССОВ
+    Developer = function(name, skills) {
+      Person.apply(this, arguments);
+      this.skills = skills || [];
+    };
+
+
+
+    для наследования лучше использовать метод Object.create
+    Developer.prototype = Object.create(Person.prototype);
+    Developer.prototype.constructor = Developer;
+
+    developer = new Developer("John", ["ruby", "ror", "python"]);
+    console.log(developer.name); // John
+    console.log(developer.skills); // Array [ "ruby", "ror", "python" ]
+    developer.greet(); // Hello, my name is John
+
+    console.log(developer instanceof Developer); // true
+    console.log(developer instanceof Person); // true
+              <hr />
+    // РОДНЫЕ МЕТОДЫ ОЪЕКТА
+    Object стоит на вершине иерахии всех классов на языке JS.
+    Практически все объекты наследуют свойства от объекта Object.prototype
+    console.log(new Object()); // Object { }
+
+    Для преобразования объекта в строку испоьзуют метод toString
+    console.log(developer.toString()); // [object Object]
+    если мы попытаемся конкатенировать к-л строку с нашим объектом, то интерпритатор вызовает метод toString
+
+    Преобразуем массив в строку
+    console.log([1, 2, 3].toString()); // 1,2,3
+
+    метод toString у функции возвращают исходный код функции
+    var func = function(arg) {
+      return arg + 10;
+    };
+    console.log(func.toString()); // function (arg) {return arg + 10; }
+
+    Метод valueof преобразует объект в число
+    console.log(+developer); // NaN
+              <hr />
+    // АТРИБУТ КЛАСС ОБЪЕКТОВ В JS
+    console.log({}.toString()); // [object Object]
+    Здесь Object - класс объекта
+
+    Напишем функцию, которая будет возвращать класс объекта
+    var classof = function(object) {
+      return Object.prototype.toString.call(object).slice(8, -1);
+    }
+
+    console.log(classof("")); // String
+    console.log(classof([])); // Array
+    console.log(classof({})); // Object
+    console.log(classof(function(){})); // Function
+    console.log(classof(1234)); // Number
+    console.log(classof(true)); // Boolean
+    console.log(classof(/\d/)); // RegExp</pre>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
   <section class="git">
@@ -440,67 +1109,37 @@ console.log(counter()); // 501</pre>
       <p><span class="span-fencing">cd C:/Users/user/my_project</span> - Инициализация репозитория в существующем каталоге (--> git init)</p>
       <span class="hr hr_yellow"></span>
       <p class="not-text-indent"><span class="span-fencing-title">SSH-keygen</span></p>
-      <div class="table-wrapper position-r">
-        <table class="table-hide position-a">
-          <caption class="table-hide__caption table-hide__caption1"><b>SSH-keygen</b></caption>
-        </table>
-        <table class="table-hide table-hide__full position-a scale">
-          <caption class="table-hide__caption table-hide__caption2"><b>SSH-keygen</b></caption>
-          <tbody>
-            <tr>
-              <td>
-                <span class="span-fencing">Git Bash</span><span>запустить и ввести <b>ssh-keygen</b> enter*4
-                  далее открыть сгенерированый файл (id_rsa.pub) и скопировать его содержимое</span><br />
-                <span class="span-fencing">Github</span>зайти в settings -> SSH and GPG keys -> создать ключ<br />
-                <span class="span-fencing-title">в терминале</span><br />
-                <span class="span-fencing">cd D:\directory\directory</span>выбираем папку, где будет содержаться repository<br />
-                <span class="span-fencing">git clone</span>далее скопировать пароль github -> Clone and download
-                (git clone git@github.com:LordVold/testRepository.git)<br />
-                <span class="span-fencing">dir -> cd D:... -> git status</span>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="margin-top70 position-r">
-        <!-- <div class="div-table__wrapper position-a">
-                    <div class="div-table__caption div-table__caption1">
-                        <b>SSH-keygen</b>
-                    </div>
-                </div> -->
+      <div class="position-r">
         <div class="div-table__wrapper position-a">
           <div class="div-table__caption">
             <b>SSH-keygen</b>
           </div>
           <div class="div-table__body scale">
             <div class="d-flex">
-              <div class="div-table__fencing">Git Bash</div>
-              <div class="div-table__fencing2">запустить и ввести <b>ssh-keygen</b> enter*4
+              <div class="div-table__fencing30">Git Bash</div>
+              <div class="div-table__fencing70">запустить и ввести <b>ssh-keygen</b> enter*4
                 далее открыть сгенерированый файл (id_rsa.pub) и скопировать его содержимое</div>
             </div>
             <div class="d-flex">
-              <div class="div-table__fencing">Github</div>
-              <div class="div-table__fencing2">зайти в settings -> SSH and GPG keys -> создать ключ</div>
+              <div class="div-table__fencing30">Github</div>
+              <div class="div-table__fencing70">зайти в settings -> SSH and GPG keys -> создать ключ</div>
             </div>
             <div class="div-table__fencing-title">
               в терминале
             </div>
             <div class="d-flex">
-              <div class="div-table__fencing">cd D:\directory\directory</div>
-              <div class="div-table__fencing2">выбираем папку, где будет содержаться repository</div>
+              <div class="div-table__fencing30">cd D:\directory\directory</div>
+              <div class="div-table__fencing70">выбираем папку, где будет содержаться repository</div>
             </div>
             <div class="d-flex">
-              <div class="div-table__fencing">git clone</div>
-              <div class="div-table__fencing2">далее скопировать пароль github -> Clone and download
+              <div class="div-table__fencing30">git clone</div>
+              <div class="div-table__fencing70">далее скопировать пароль github -> Clone and download
                 (git clone git@github.com:LordVold/testRepository.git)</div>
             </div>
-            <div class="div-table__fencing">dir -> cd D:... -> git status</div>
+            <div class="div-table__fencing30">dir -> cd D:... -> git status</div>
           </div>
         </div>
       </div>
-
-
       <span class="hr hr_yellow margin-top70"></span>
       <p><span class="span-fencing">git status</span> - Проверка статуса файлов</p>
       <div class="table-wrapper position-r">
@@ -1009,7 +1648,6 @@ git ci</pre>
       <p><span class="span-fencing">Ctrl + T</span> — поиск символа ( название ф-ции )</p>
       <p><span class="span-fencing">Ctrl + ,</span> — переход в окно настроек.</p>
       <p><span class="span-fencing">Ctrl + B</span> — переключение видимости панели управления.</p>
-      <p><span class="span-fencing">Ctrl + `</span> — переключение видимости терминала.</p>
       <p><span class="span-fencing">F11</span> — полноэкранный режим.</p>
       <p><span class="span-fencing">Ctrl + (Mouse wheel)</span> — переключение масштаба (<b>“editor.mouseWheelZoom”: true,</b> - чтобы работал зум на колесико мыши).</p>
       <p><span class="span-fencing">Ctrl + K, Z</span> — Zen mode.</p>
@@ -1034,6 +1672,7 @@ git ci</pre>
       <p class="not-text-indent"><span class="span-fencing-title">Коментарии</span></p>
       <p><span class="span-fencing">Ctrl + /</span> — вставка строчного комментария.</p>
       <p><span class="span-fencing">Shift + Alt + A</span> — вставка блочного комментария.</p>
+
       <p><span class="span-fencing">.inner|c</span> — комментарий с закрывающим тегом</p>
     </div>
   </section>
@@ -1134,37 +1773,85 @@ git ci</pre>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script>
     $(function () {
+      $('.div-table__caption').css({
+        'borderRadius': '8px',
+        'borderBottom': '1px solid transparent',
+      }).siblings().hide().parent().css({
+        'z-index': '0',
+      });
+
+      $('.div-table__caption').click(function () {
+        if ($(this).siblings().is(':hidden')) {
+          $('.div-table__caption').css({
+            'borderRadius': '8px',
+            'borderBottom': '1px solid transparent',
+          }).siblings().slideUp('slow').parent().css({
+            'z-index': '0',
+          });
+          $(this).css({
+            'borderRadius': '8px 8px 0 0',
+            'borderBottom': '1px solid black',
+          }).siblings().slideDown('slow').parent().css({
+            'z-index': '1',
+          });
+        } else {
+          $(this).css({
+            'borderRadius': '8px',
+            'borderBottom': '1px solid transparent',
+          }).siblings().slideUp('slow');
+        }
+      });
+
+      // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      $(document).mouseup(function (e) {
+        if (!$('.div-table__wrapper').is(e.target) && $('.div-table__wrapper').has(e.target).length === 0) {
+          $('.div-table__body').slideUp() && $('.div-table__caption').css({
+            'borderRadius': '8px',
+            'borderBottom': '1px solid transparent',
+          });
+        }
+      });
+      // $(document).scroll(function (e) {
+      //   if (!$('.div-table__wrapper').is(e.target) && $('.div-table__wrapper').has(e.target).length === 0) {
+      //     $('.div-table__body').slideUp() && $('.div-table__caption').css({
+      //       'borderRadius': '8px',
+      //       'borderBottom': '1px solid transparent',
+      //     });
+      //   }
+      // });
+      // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       $('.table-hide__caption').click(function () {
         $(this).parent().toggleClass("scale");
         $(this).parent().siblings().toggleClass('scale');
       });
-    });
-    $(function () {
-      let divTableCaption = $('.div-table__caption'),
-        divTableBody = $('.div-table__body'),
-        caption;
-      $(divTableCaption).click(function () {
-        $(this).siblings().toggleClass('scale');
-        if ($(divTableBody).hasClass('scale')) {
-          caption = $(divTableCaption).css({
-            'borderRadius': '8px',
-            'borderBottom': 'none'
-          });
-        } else {
-          caption = $(divTableCaption).css({
-            'borderRadius': '8px 8px 0 0',
-            'borderBottom': '1px solid black'
-          });
-        }
-      });
-
-      $(document).mouseup(function (e) {
-        let divTableWrapper = $(".div-table__wrapper"),
-          divTableBody = $('.div-table__body');
-        if (divTableWrapper.has(e.target).length === 0 && divTableBody.parent().has('.scale')) {
-          $(divTableBody).addClass('scale');
-        }
-      });
+      // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      // with add class scale
+      // $('.div-table__caption').click(function () {
+      //   if ($(this).siblings().hasClass('scale')) {
+      //     $('.div-table__body').addClass('scale').siblings().css({
+      //       'borderRadius': '8px',
+      //       'borderBottom': 'none',
+      //       'transition': 'all 0.5s ease 0s',
+      //     }).parent().css({
+      //       'z-index': '0'
+      //     });
+      //     $(this).css({
+      //       'borderRadius': '8px 8px 0 0',
+      //       'borderBottom': '1px solid black',
+      //       'transition': 'all 0.5s ease 0s',
+      //     }).siblings().removeClass('scale').parent().css({
+      //       'z-index': '1'
+      //     });
+      //   } else {
+      //     $('.div-table__body').addClass('scale').siblings().css({
+      //       'borderRadius': '8px',
+      //       'borderBottom': 'none',
+      //       'transition': 'all 0.5s ease 0s',
+      //     }).parent().css({
+      //       'z-index': '0'
+      //     });
+      //   };
+      // });
     });
   </script>
 </body>
