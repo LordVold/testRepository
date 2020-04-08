@@ -22,20 +22,48 @@
       <p><span class="span-fencing"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#Table" target="_blank">link to MDN</a></span> - Operator
         precedence</p>
       <p><span class="span-fencing"><a href="http://java-script2017.blogspot.com/2017/05/js-1-hello-world.html" target="_blank">SORAX</a></span> - Sorax__blog</p>
-      привести к числу, к строке
-      <p class="not-text-indent"><span class="span-fencing-title">string</span></p>
-      <p><span class="span-fencing">string.length</span> - длина строки -> string.length - 1</p>
-      <p><span class="span-fencing">string.chartAt(n)</span> - возвращает указанный символ из строки (n - целое число от 0 до длины строки минус 1)</p>
-      <p><span class="span-fencing">string.string[n]</span> - возвращает указанный символ из строки (n - целое число от 0 до длины строки минус 1)</p>
-      <p><span class="span-fencing">string.substring(n)</span> - часть строки от n до конца. Вторым параметром указывается до какого индекса выборка <b>(n,m)</b></p>
-      <p><span class="span-fencing">string.slice(-n)</span> - тоже, что и верхний пример, но благодаря "-" номирация происходит с конца</p>
-      <p><span class="span-fencing">string.substr(n,m)</span> - n - индекс начала, m - число символов</p>
-      <p><span class="span-fencing">string.indexOf("n")</span> - поиск символа или слова</p>
-      <p><span class="span-fencing">string.lastIndexOf("n")</span> - поиск с конца</p>
-      <p><span class="span-fencing">string.replace("n","m")</span> - замена n на m</p>
-      <p><span class="span-fencing">string.split(" ")</span> - выбираем разделитель, например пробел и разбиваем строку на масив</p>
-      <p><span class="span-fencing">string.toUpperCase()</span> - верхний регистр</p>
-      <p><span class="span-fencing">string.toLowerCase()</span> - нижний регистр</p>
+      <p class="not-text-indent"><span class="span-fencing-title">String</span></p>
+      <p><span class="span-fencing">String.length</span> - длина строки</p>
+      <p><span class="span-fencing">String.fromCharCode()</span> - повертає рядок з вказаних кодів символів Unicode.</p>
+      <p><span class="span-fencing">String.fromCodePoint()</span> - повертає рядок створений з послідовних кодів.</p>
+      <p><span class="span-fencing">string.chartAt(n)</span> - повертає символ за номером позиції. (n - целое число от 0 до длины строки минус 1)</p>
+      <p><span class="span-fencing">String.charCodeAt()</span> - повертає код символу за номером позиції.</p>
+      <p><span class="span-fencing">String.codePointAt()</span> - повертає невід'ємне ціле число, яке є закодованим в UTF-16 значенням кодової точки.</p>
+      <p><span class="span-fencing">String.concat()</span> - об'єднує два і більше рядків в один.</p>
+      <p><span class="span-fencing">String.endsWith()</span> - визначає чи закінчується рядок іншим рядком.</p>
+      <p><span class="span-fencing">String.includes()</span> - визначає чи знаходиться один рядок в іншому рядку.</p>
+      <p><span class="span-fencing">String.indexOf()</span> - пошук символів у рядку.</p>
+      <p><span class="span-fencing">String.lastIndexOf()</span> - зворотній пошук символів у рядку.</p>
+      <p><span class="span-fencing">String.localeCompare()</span> - повертає число, вказуючи де повинен знаходитися рядок при сортуванні: до, після чи на своєму місці.</p>
+      <p><span class="span-fencing">String.match()</span> - повертає отримані збіги у рядку з регулярним виразом.</p>
+      <p><span class="span-fencing">String.repeat()</span> - повертає новий рядок який містить вказану кількість повторень рядка.</p>
+      <p><span class="span-fencing">String.replace()</span> - заміна символів у рядку.</p>
+      <p><span class="span-fencing">String.search()</span> - виконує пошук у рядку за заданим шаблоном.</p>
+      <p><span class="span-fencing">String.slice()</span> - витягує частину рядка і повертає новий рядок.</p>
+      <p><span class="span-fencing">String.split()</span> - розбиває об'єкт String на масив рядків шляхом розділення рядку вказаним підрядком.</p>
+      <p><span class="span-fencing">String.startsWith()</span> - визначає чи починається рядок з символів другого рядка.</p>
+      <p><span class="span-fencing">String.lastIndexOf()</span> - зворотній пошук символів у рядку.</p>
+      <p><span class="span-fencing">String.localeCompare()</span> - повертає число, вказуючи де повинен знаходитися рядок при сортуванні: до, після чи на своєму місці.</p>
+      <p><span class="span-fencing">String.match()</span> - повертає отримані збіги у рядку з регулярним виразом.</p>
+      <p><span class="span-fencing">String.repeat()</span> - повертає новий рядок який містить вказану кількість повторень рядка.</p>
+      <p><span class="span-fencing">String.replace()</span> - заміна символів у рядку.</p>
+      <p><span class="span-fencing">String.search()</span> - виконує пошук у рядку за заданим шаблоном.</p>
+      <p><span class="span-fencing">String.slice()</span> - витягує частину рядка і повертає новий рядок.</p>
+      <p><span class="span-fencing">String.split()</span> - розбиває об'єкт String на масив рядків шляхом розділення рядку вказаним підрядком.</p>
+      <p><span class="span-fencing">String.startsWith()</span> - визначає чи починається рядок з символів другого рядка.</p>
+      <p><span class="span-fencing">String.substr()</span> - повертає новий рядок із вказаною кількістю символів з вказаної позиції.</p>
+      <p><span class="span-fencing">String.substring()</span> - повертає новий рядок із вказаної позиції до вказаної позиції.</p>
+      <p><span class="span-fencing">String.toLocaleLowerCase()</span> - перетворює в нижній регістр згідно з правилами перетворення регістра локалі.</p>
+      <p><span class="span-fencing">String.toLocaleUpperCase()</span> - перетворює у верхній регістр згідно з правилами перетворення регістра локалі.</p>
+      <p><span class="span-fencing">String.toLowerCase()</span> - повертає рядок з якого було викликано метод у нижньому регістру.</p>
+      <p><span class="span-fencing">String.toSource()</span> - повертає рядок, що представляє вихідний код об'єкта.</p>
+      <p><span class="span-fencing">String.toString()</span> - повертає рядок, що представляє зазначений об'єкт.</p>
+      <p><span class="span-fencing">String.toUpperCase()</span> - перетворює рядок у верхній регістр.</p>
+      <p><span class="span-fencing">String.trim()</span> - видаляє пробіли на початку і в кінці рядка.</p>
+      <p><span class="span-fencing">String.trimLeft()</span> - видаляє пробіли на початку рядка.</p>
+      <p><span class="span-fencing">String.trimRight()</span> - видаляє пробіли на в кінці рядка.</p>
+      <p><span class="span-fencing">String.valueOf()</span> - повертає примітивне значення об'єкта.</p>
+      <span class="hr hr_red"></span>
       <p><span class="span-fencing">typeof()</span> - узнать тип</p>
       <p><span class="span-fencing">isFinite()</span> - является ли число конечным</p>
       <p><span class="span-fencing">isNaN()</span></p>
@@ -147,6 +175,7 @@ false || true
         </table>
       </div>
       <span class="hr hr_red margin-top70"></span>
+            <p class="not-text-indent"><span class="span-fencing-title">Number</span></p>
       <p><span class="span-fencing">Number("n")</span> - перевести в числовой тип</p>
       <p><span class="span-fencing">+"n"</span> - преобразование в числовой тип (унарный плюс - игнорируются пробелы перед числом)</p>
       <p><span class="span-fencing">parseInt("n", 10)</span> - преобразование в числовой тип (игнорируются пробелы перед числом и все символы после)</p>
