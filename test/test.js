@@ -92,7 +92,6 @@ $(function () {
     arrMap = x.map(x => x * 2);
     return arrMap;
   }
-  // console.log("  maps(5)", maps([5, 2, 3, 4]));
   // 5~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   function invert(array) {
     let arr = array
@@ -103,7 +102,6 @@ $(function () {
     }
     return arr;
   }
-  // console.log("invert([5,6,7,5,4,])", invert([5,6,7,5,4,]))
   // 6~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   class SmallestIntegerFinder {
     findSmallestInt(arr) {
@@ -113,7 +111,6 @@ $(function () {
           minInt = arr[i];
         }
       }
-      console.log("SmallestIntegerFinder -> findSmallestInt -> minInt", minInt)
       return minInt;
     }
   }
@@ -146,7 +143,6 @@ $(function () {
     if (input.length === 0 || input.reduce(function (total, num) {
         return total + num;
       }) === 0) {
-      console.log("countPositivesSumNegatives -> empty", emptyArr)
       return emptyArr
     } else {
       for (; i < input.length; i++) {
@@ -159,7 +155,6 @@ $(function () {
       }
       resArr[0] = pos;
       resArr[1] = neg;
-      console.log("countPositivesSumNegatives -> resArr", resArr)
       return resArr
     }
   }
@@ -177,7 +172,6 @@ $(function () {
     }
     return arr
   }
-  // console.log("  generateRange(1, 10, 3)", generateRange(1, 10, 3))
   // 10~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   function abbrevName(name) {
     let nameList = name.split(' '),
@@ -191,7 +185,6 @@ $(function () {
       return fullName
     }
   }
-  // console.log("abbrevName('Sam Harris')", abbrevName('Sam Harris'))
   // 11~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   function nthEven(n) {
     let resNum = i = 0,
@@ -210,9 +203,6 @@ $(function () {
       return resNum
     }
   }
-  // console.log("nthEven(1)", nthEven(1))
-  // console.log("nthEven(3)", nthEven(3))
-  // console.log("nthEven(1298734)", nthEven(1298734))
   // 12~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   function noSpace(x) {
     let string = x.replace(/\s/g, '');
@@ -223,13 +213,11 @@ $(function () {
       let string = x.split(' ').join('');
       return string
     } */
-  // console.log("noSpace('map user float')", noSpace('map user float'))
   // 13~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   function removeChar(str) {
     let strCut = str.slice(1, str.length - 1);
     return strCut
   };
-  // console.log("removeChar('mercedes')", removeChar('mercedes'))
   // 14~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   function solution(str) {
     return str.split("").reverse().join("");
@@ -245,7 +233,6 @@ $(function () {
     }
     return rev;
   }
-  // console.log("solution('lord')", solution('lord'))
   // 15~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   function divisibleBy(numbers, divisor) {
     let resArr = []
@@ -256,7 +243,6 @@ $(function () {
     }
     return resArr
   }
-  // console.log("divisibleBy([1, 2, 3, 4, 5, 6], 2)", divisibleBy([1, 2, 3, 4, 5, 6], 2))
   // 16~max result~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   function expressionMatter(a, b, c) {
     let arr = [a, b, c],
@@ -311,7 +297,6 @@ $(function () {
       });
     return arr[0]
   }
-  // console.log("expressionMatter(1,2,3)", expressionMatter(1,2,3))
   // 17~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   function calculateTip(amount, rating) {
     let tips;
@@ -333,13 +318,11 @@ $(function () {
       return tips
     }
   }
-  // console.log("calculateTip(20, 'Excellent')", calculateTip(20, 'Excellent'));
   // 18~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   function stringToArray(string) {
     let arr = string.split(' ');
     return arr
   }
-  // console.log("stringToArray('Robin Singh')", stringToArray('Robin Singh'))
   // 19~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   function digitize(n) {
     n = n + "";
@@ -349,7 +332,6 @@ $(function () {
     }
     return n
   }
-  // console.log("digitize(35231)", digitize(35231))
   // 20~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   function twoSort(s) {
     s.sort();
@@ -360,7 +342,6 @@ $(function () {
     }
     return resultStr
   }
-  // console.log("twoSort(['bitcoin', 'take', 'over', 'the', 'world', 'maybe', 'who', 'knows', 'perhaps'])", twoSort(['bitcoin', 'take', 'over', 'the', 'world', 'maybe', 'who', 'knows', 'perhaps']))
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   // ~~~~~~~~~~~~~~~~ TEST ~~~~~~~~~~~~~~~~
@@ -382,7 +363,6 @@ $(function () {
     }
     return oneZero
   }
-  // console.log("fakeBin(1256)", fakeBin(12562));
   //~~~ #02    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   function hasOnlyPositiveNumbers(numbers) {
     function lessZero(element) {
@@ -390,7 +370,6 @@ $(function () {
     }
     return numbers.every(lessZero)
   }
-  console.log("hasOnlyPositiveNumbers([1,2,3])", hasOnlyPositiveNumbers([1, 2, 3]));
   //~~~ #03    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   function findSmallestElement(arr) {
     let minInt = arr[0];
@@ -401,6 +380,7 @@ $(function () {
     }
     return minInt;
   }
+  // console.log("findSmallestElement([21, 33, 4, 55, 25, 16, 77])", findSmallestElement([21, 33, 114, 55, 25, 16, 77]));
   //~~~ #04    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   function calculateAverageCountryPopulation(countries) {
     let sum = null,
@@ -430,7 +410,6 @@ $(function () {
     }
     return true;
   };
-  // console.log("hasNoneLetters('blacklist', 'phrase')", hasNoneLetters('blacklist', 'phrase'))
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   // ~~~~~~~~~~~~~~~~ KATA ~~~~~~~~~~~~~~~~
@@ -446,7 +425,6 @@ $(function () {
     }
     return num
   }
-  // console.log("solution(10)", solution(10));
   //~~~ #02    (6 kyu)~Decode the Morse code 1/3~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   decodeMorse = function (morseCode) {
     const morse = {
@@ -507,7 +485,6 @@ $(function () {
     }
     return text = morseWorld.join(' ');
   }
-  // console.log("decodeMorse('.... . -.--   .--- ..- -.. .')", decodeMorse('.... . -.--   .--- ..- -.. .'));
   //   another way
   decodeMorse = function (morseCode) {
     function decodeMorseLetter(letter) {
@@ -531,7 +508,6 @@ $(function () {
     }
     return newStr;
   }
-  // console.log("'hello WORLD'.toAlternatingCase()", 'hello WORLD'.toAlternatingCase())
   //~~~ #04    (8 kyu)~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   String.prototype.isUpperCase = function () {
     for (let i = 0; i < this.length; i++) {
@@ -541,7 +517,6 @@ $(function () {
     }
     return true
   }
-  // console.log("'hello I AM DONALD'.isUpperCase();", 'hello I AM DONALD'.isUpperCase());
   //~~~ #05    (8 kyu)~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   function arrayMadness(a, b) {
     let sumA = 0,
@@ -558,7 +533,6 @@ $(function () {
       return false
     }
   }
-  // console.log("arrayMadness([5, 6, 7], [4, 5, 6])", arrayMadness([5, 6, 7], [4, 5, 6]));
   //~~~ #06    (8 kyu)~Polish alphabet~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   function correctPolishLetters(text) {
     const polishLetters = ['ą', 'ć', 'ę', 'ł', 'ń', 'ó', 'ś', 'ź', 'ż'];
@@ -575,7 +549,6 @@ $(function () {
     }
     return translatedText
   }
-  // console.log("correctPolishLetters('Jędrzej Błądziński')", correctPolishLetters('Jędrzej Błądziński'));
 
   function correctPolishLetters(string) {
     let letters = {
@@ -606,7 +579,6 @@ $(function () {
     // }
     return amount = m * n
   }
-  // console.log("paperwork(5, 5)", paperwork(5, 5));
   //~~~ #08    (7 kyu)~Computer problem series #1: Fill the Hard Disk Drive~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   function save(sizes, hd) {
     let filesSum = 0;
@@ -629,13 +601,130 @@ $(function () {
       }
     }
   }
-  // console.log("save([])", save([]));
-  // console.log("save([4, 4, 4, 3, 3], 12)", save([4, 4, 4, 3, 3], 12));
-  // console.log("save([7, 19, 18, 17, ..., 18, 15], 35)",
   // save([7, 19, 18, 17, 8, 2, 6, 2, 11, 18, 19, 16, 3, 9, 4, 13, 15, 18, 7, 18, 15, 10, 15, 14, 12, 17, 10, 0, 12, 14, 17, 8, 8, 20, 12, 6, 1, 18, 15], 35));
-  //~~~ #04    (8 kyu)~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  //~~~ #04    (8 kyu)~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  //~~~ #04    (8 kyu)~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  //~~~ #04    (8 kyu)~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  //~~~ #04    (8 kyu)~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  //~~~ #04    (7 kyu)~Points in Segments~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  function segments(m, a) {
+
+  }
+  // console.log(" segments({m: 5, a: [[2, 2], [1, 2], [5, 5]]})", segments({
+  //   m: 5,
+  //   a: [
+  //     [2, 2],
+  //     [1, 2],
+  //     [5, 5]
+  //   ]
+  // }));
+  // console.log(" segments({m: 7, a: [[0, 7]]})", segments({
+  //   m: 7,
+  //   a: [
+  //     [0, 7]
+  //   ]
+  // }));
+  //~~~ #04    (7 kyu)~Responsible Drinking~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  function hydrate(s) {
+    let num = sum = null;
+    const reducer = (a, b) => parseInt(a) + parseInt(b);
+    num = s.match(/\d/g);
+    sum = num.reduce(reducer);
+    if (sum == 1) {
+      return sum + ' glass of water'
+    } else {
+      return sum + ' glasses of water'
+    }
+  }
+  //~~~ OR ~~~
+  function hydrate(s) {
+    const reducer = (accumulator, currentValue) => accumulator + currentValue;
+    const formatGlass = n => n > 1 ? 'glasses' : 'glass';
+    const numberOfDrinks = s
+      .match(/\d/g)
+      .map(Number)
+      .reduce(reducer);
+    return `${numberOfDrinks} ${formatGlass(numberOfDrinks)} of water`;
+  }
+  // console.log("hydrate('1 glass')", hydrate('1 beer'));
+  // console.log("hydrate('10 glasses')", hydrate('1 shot, 5 beers, 2 shots, 1 glass of wine, 1 beer'));
+  //~~~ #04    (7 kyu)~Find min and max~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  function getMinMax(arr) {
+    let res = [];
+    let arrSort = arr.sort(function (a, b) {
+      return a - b
+    });
+    res[0] = arrSort[0];
+    res[1] = arrSort[arrSort.length - 1];
+    return res
+  };
+  //~~~ OR ~~~
+  function getMinMax(arr) {
+    return [Math.min(...arr), Math.max(...arr)];
+  };
+  // console.log("getMinMax([23, 13])", getMinMax([23, 13]));
+  //~~~ #04    (7 kyu)~Basic Calculator~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  function calculate(num1, operation, num2) {
+    let operator = new RegExp('[+*/-]');
+    console.log("calculate -> operator", operator)
+    let res;
+    // if (!operation.match(operator) || (operation == '/' && num2 === 0)) {
+    if (!operator.test(operation) || (operation == '/' && num2 === 0)) {
+      return null
+    }
+    switch (operation) {
+      case '+':
+        res = num1 + num2;
+        break;
+      case '-':
+        res = num1 - num2;
+        break;
+      case '*':
+        res = num1 * num2;
+        break;
+      case '/':
+        res = num1 / num2;
+        break;
+    }
+    return res
+  }
+  //~~~ OR ~~~
+  function calculate(num1, operation, num2) {
+    var ops = {
+      '+': function (x, y) {
+        return x + y;
+      },
+      '-': function (x, y) {
+        return x - y;
+      },
+      '*': function (x, y) {
+        return x * y;
+      },
+      '/': function (x, y) {
+        return y === 0 ? null : x / y;
+      }
+    };
+    return (ops[operation] || function () {
+      return null;
+    })(num1, num2);
+  }
+  //~~~ OR ~~~
+  const calculate = (a, o, b) => /[^-+/*]/.test(o) || !b && o == '/' ? null : eval(a + o + b) || 0;
+  //~~~ OR ~~~
+  function calculate(num1, operation, num2) {
+    var op = ['+', '-', '*', '/'],
+      fn = [function (a, b) {
+          return a + b;
+        },
+        function (a, b) {
+          return a - b;
+        },
+        function (a, b) {
+          return a * b;
+        },
+        function (a, b) {
+          return b === 0 ? null : a / b;
+        }
+      ],
+      i = op.indexOf(operation);
+    return i === -1 ? null : fn[i](num1, num2);
+  }
+  // console.log(calculate(24, "+", 0));
+  //~~~ #04    (7 kyu)~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 });

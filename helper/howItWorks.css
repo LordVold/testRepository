@@ -127,6 +127,10 @@ button {
   background-color: rgba(255, 255, 0, 0.3);
 }
 
+.bg-gray {
+  background-color: rgba(128, 128, 128, 0.3);
+}
+
 .bg-red {
   background-color: rgba(255, 0, 0, 0.3);
 }
@@ -191,14 +195,6 @@ button {
 .span-fencing-title {
   display: inline-block;
   border-right: 2px solid rgb(238, 94, 94);
-}
-
-.padding-b25 {
-  padding-bottom: 25px;
-}
-
-.padding-b-25 {
-  padding-bottom: -25px;
 }
 
 /* ~~~ DEFAULT CLASSES END ~~~ */
@@ -317,18 +313,6 @@ button {
   border-radius: 0 0 7px 7px;
   background-color: red;
   line-height: 1.5;
-  /* with add class scale */
-  /* transform: scaleY(1);
-  transition: all 0.5s ease 0s;
-}
-
-.div-table__body.scale {
-  transform: scaleY(0);
-  transition: all 0.4s ease 0s; */
-}
-
-.div-table__body div:last-child {
-  padding-bottom: 20px;
 }
 
 .div-table__body pre {
@@ -344,16 +328,34 @@ button {
   margin: 0 0 0 40px;
 }
 
+.div-table__fencing10,
+.div-table__fencing20,
 .div-table__fencing30,
-.div-table__fencing45,
-.div-table__fencing65 {
+.div-table__fencing35,
+.div-table__fencing45 {
   border-right: 1px solid black;
-  padding: 20px 20px 0 20px;
   text-align: right;
+  font-weight: bolder;
 }
 
 .div-table__fencing {
   width: 100%;
+}
+
+.div-table__fencing10 {
+  width: 10%;
+}
+
+.div-table__fencing90 {
+  width: 90%;
+}
+
+.div-table__fencing20 {
+  width: 20%;
+}
+
+.div-table__fencing80 {
+  width: 80%;
 }
 
 .div-table__fencing30 {
@@ -364,6 +366,14 @@ button {
   width: 70%;
 }
 
+.div-table__fencing35 {
+  width: 35%;
+}
+
+.div-table__fencing65 {
+  width: 65%;
+}
+
 .div-table__fencing45 {
   width: 45%;
 }
@@ -372,18 +382,17 @@ button {
   width: 55%;
 }
 
-.div-table__fencing65 {
-  width: 65%;
-}
-
-.div-table__fencing35 {
-  width: 35%;
-}
-
 .div-table__fencing,
+.div-table__fencing10,
+.div-table__fencing90,
+.div-table__fencing20,
+.div-table__fencing80,
+.div-table__fencing30,
 .div-table__fencing70,
+.div-table__fencing45,
 .div-table__fencing55,
-.div-table__fencing35 {
+.div-table__fencing35,
+.div-table__fencing65 {
   padding: 20px 20px 0 20px;
 }
 
@@ -394,6 +403,10 @@ button {
   width: 30%;
   background-color: black;
   color: red;
+}
+
+.div-table__body .padding-b20 {
+  padding-bottom: 20px;
 }
 
 /* div-table__wrapper end */
