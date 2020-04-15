@@ -114,7 +114,7 @@ $(function () {
       return minInt;
     }
   }
-  let sif = new SmallestIntegerFinder([78, 56, 232, 12, 8]);
+  // let sif = new SmallestIntegerFinder([78, 56, 232, 12, 8]);
   //  sif = new SmallestIntegerFinder([78, 56, 232, 12, 0]);
   //  sif = new SmallestIntegerFinder([1, 56, 232, 12, 8]);
   // 7~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -478,7 +478,6 @@ $(function () {
     let morseCodeArr = morseCode.trim().split('   ');
     let morseWorld = [];
     let j = 0;
-    let text = '';
     for (let i = 0; i < morseCodeArr.length; i++) {
       morseWorld[j] = morseCodeArr[i].split(' ').map((c) => morse[c] || c).join('');
       j++;
@@ -486,16 +485,17 @@ $(function () {
     return text = morseWorld.join(' ');
   }
   //   another way
-  decodeMorse = function (morseCode) {
-    function decodeMorseLetter(letter) {
-      return MORSE_CODE[letter];
-    }
+  /*   decodeMorse = function (morseCode) {
+      function decodeMorseLetter(letter) {
+        return MORSE_CODE[letter];
+      }
 
-    function decodeMorseWord(word) {
-      return word.split(' ').map(decodeMorseLetter).join('');
-    }
-    return morseCode.trim().split('   ').map(decodeMorseWord).join(' ');
-  }
+      function decodeMorseWord(word) {
+        return word.split(' ').map(decodeMorseLetter).join('');
+      }
+      return morseCode.trim().split('   ').map(decodeMorseWord).join(' ');
+    } */
+  // console.log("  decodeMorse('.... . -.--   ...---...')",   decodeMorse('.... . -.--   ...---...'));
   //~~~ #03    (8 kyu)~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   String.prototype.toAlternatingCase = function () {
     let newStr = '';
@@ -602,7 +602,7 @@ $(function () {
     }
   }
   // save([7, 19, 18, 17, 8, 2, 6, 2, 11, 18, 19, 16, 3, 9, 4, 13, 15, 18, 7, 18, 15, 10, 15, 14, 12, 17, 10, 0, 12, 14, 17, 8, 8, 20, 12, 6, 1, 18, 15], 35));
-  //~~~ #04    (7 kyu)~Points in Segments~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  //~~~ #09    (7 kyu)~Points in Segments~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   function segments(m, a) {
 
   }
@@ -620,7 +620,7 @@ $(function () {
   //     [0, 7]
   //   ]
   // }));
-  //~~~ #04    (7 kyu)~Responsible Drinking~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  //~~~ #10    (7 kyu)~Responsible Drinking~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   function hydrate(s) {
     let num = sum = null;
     const reducer = (a, b) => parseInt(a) + parseInt(b);
@@ -633,18 +633,18 @@ $(function () {
     }
   }
   //~~~ OR ~~~
-  function hydrate(s) {
-    const reducer = (accumulator, currentValue) => accumulator + currentValue;
-    const formatGlass = n => n > 1 ? 'glasses' : 'glass';
-    const numberOfDrinks = s
-      .match(/\d/g)
-      .map(Number)
-      .reduce(reducer);
-    return `${numberOfDrinks} ${formatGlass(numberOfDrinks)} of water`;
-  }
+  /*   function hydrate(s) {
+      const reducer = (accumulator, currentValue) => accumulator + currentValue;
+      const formatGlass = n => n > 1 ? 'glasses' : 'glass';
+      const numberOfDrinks = s
+        .match(/\d/g)
+        .map(Number)
+        .reduce(reducer);
+      return `${numberOfDrinks} ${formatGlass(numberOfDrinks)} of water`;
+    } */
   // console.log("hydrate('1 glass')", hydrate('1 beer'));
   // console.log("hydrate('10 glasses')", hydrate('1 shot, 5 beers, 2 shots, 1 glass of wine, 1 beer'));
-  //~~~ #04    (7 kyu)~Find min and max~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  //~~~ #11    (7 kyu)~Find min and max~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   function getMinMax(arr) {
     let res = [];
     let arrSort = arr.sort(function (a, b) {
@@ -659,7 +659,7 @@ $(function () {
     return [Math.min(...arr), Math.max(...arr)];
   };
   // console.log("getMinMax([23, 13])", getMinMax([23, 13]));
-  //~~~ #04    (7 kyu)~Basic Calculator~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  //~~~ #12    (7 kyu)~Basic Calculator~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   function calculate(num1, operation, num2) {
     let operator = new RegExp('[+*/-]');
     console.log("calculate -> operator", operator)
@@ -683,48 +683,123 @@ $(function () {
         break;
     }
     return res
-  }
-  //~~~ OR ~~~
-  function calculate(num1, operation, num2) {
-    var ops = {
-      '+': function (x, y) {
-        return x + y;
-      },
-      '-': function (x, y) {
-        return x - y;
-      },
-      '*': function (x, y) {
-        return x * y;
-      },
-      '/': function (x, y) {
-        return y === 0 ? null : x / y;
-      }
-    };
-    return (ops[operation] || function () {
-      return null;
-    })(num1, num2);
-  }
-  //~~~ OR ~~~
-  const calculate = (a, o, b) => /[^-+/*]/.test(o) || !b && o == '/' ? null : eval(a + o + b) || 0;
-  //~~~ OR ~~~
-  function calculate(num1, operation, num2) {
-    var op = ['+', '-', '*', '/'],
-      fn = [function (a, b) {
-          return a + b;
-        },
-        function (a, b) {
-          return a - b;
-        },
-        function (a, b) {
-          return a * b;
-        },
-        function (a, b) {
-          return b === 0 ? null : a / b;
-        }
-      ],
-      i = op.indexOf(operation);
-    return i === -1 ? null : fn[i](num1, num2);
+    //~~~ OR ~~~
+    /*     var ops = {
+          '+': function (x, y) {
+            return x + y;
+          },
+          '-': function (x, y) {
+            return x - y;
+          },
+          '*': function (x, y) {
+            return x * y;
+          },
+          '/': function (x, y) {
+            return y === 0 ? null : x / y;
+          }
+        };
+        return (ops[operation] || function () {
+          return null;
+        })(num1, num2);
+        //~~~ OR ~~~
+        const calculate = (a, o, b) => /[^-+/*]/.test(o) || !b && o == '/' ? null : eval(a + o + b) || 0;
+        //~~~ OR ~~~
+        var op = ['+', '-', '*', '/'],
+          fn = [function (a, b) {
+              return a + b;
+            },
+            function (a, b) {
+              return a - b;
+            },
+            function (a, b) {
+              return a * b;
+            },
+            function (a, b) {
+              return b === 0 ? null : a / b;
+            }
+          ],
+          i = op.indexOf(operation);
+        return i === -1 ? null : fn[i](num1, num2); */
   }
   // console.log(calculate(24, "+", 0));
-  //~~~ #04    (7 kyu)~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  //~~~ #13    (7 kyu)~Sort rectangles and circles by area II~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  /*   function sortByArea(array) {
+      let arrayArea = [];
+      if (array.length === 0) {
+        return array = [];
+      }
+      array.map(function (elem) {
+        if (elem.constructor === Array) {
+          arrayArea += (elem[0] * elem[1]).toFixed() + ', ';
+        } else {
+          arrayArea += (3.14 * elem ** 2).toFixed() + ', ';
+        }
+      });
+      arrayArea = arrayArea.slice(0, -2).split(', ');
+      console.log("sortByArea -> arrayArea", arrayArea)
+      let dictionary = new Map();
+      for (let i = 0; i < arrayArea.length; i++) {
+        dictionary.set(arrayArea[i], array[i]);
+        console.log("sortByArea -> dictionary", dictionary)
+      }
+      arrayArea = arrayArea.sort(function (a, b) {
+        return a - b
+      });
+      let j;
+      for (let [key, value] of dictionary) {
+        j = arrayArea.indexOf(key, value);
+        console.log("sortByArea -> j", j)
+        array[j] = value;
+      }
+      return array
+    }*/
+  function sortByArea(array) {
+    let arrayArea = [];
+    if (array.length === 0) {
+      return array = [];
+    }
+    array.map(function (elem) {
+      let val = 0
+      if (elem.constructor === Array) {
+        val = (elem[0] * elem[1]);
+      } else {
+        val = (3.14 * elem ** 2);
+      }
+      arrayArea.push({
+        val,
+        elem
+      });
+    });
+    arrayArea = arrayArea.sort(function (a, b) {
+      return a.val - b.val;
+    });
+    let j = 0;
+    for (let item of arrayArea) {
+      array[j] = item.elem;
+      j++
+    }
+    return array
+  }
+  // console.log("sortByArea ->", sortByArea([
+  //   [4.23, 6.43], 1.23, 3.444, [1.342, 3.212]
+  // ]));
+  // console.log("sortByArea ->", sortByArea([
+  //   [7.71, 2.9], 1.82, 5.24, [4.32, 9.49],
+  //   [8.4, 5.84],
+  //   [1.8, 5.82],
+  //   [4.47, 8.11], 1.25
+  // ]));
+  //~~~ #14    (7 kyu)~Points in Segments~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  function segments(m, a) {
+
+  }
+  // console.log("calculate -> segments", segments({m: 5, a: [[2, 2], [1, 2], [5, 5]]}));
+  //~~~ #15    (7 kyu)~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  //~~~ #16    (7 kyu)~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  //~~~ #17    (7 kyu)~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  //~~~ #18    (7 kyu)~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 });
